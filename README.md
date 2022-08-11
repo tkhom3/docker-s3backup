@@ -1,6 +1,5 @@
 [![Build and Deploy Image](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml)
-[![Codacy Security Scan](https://github.com/tkhom3/docker-s3backup/actions/workflows/codacy-analysis.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/codacy-analysis.yml)
-[![Scan with Trivy](https://github.com/tkhom3/docker-s3backup/actions/workflows/scan-with-trivy-pr.yaml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/scan-with-trivy-pr.yaml)
+[![Security Scans](https://github.com/tkhom3/docker-s3backup/actions/workflows/security-scans-pr.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/security-scans-pr.yml)
 
 # docker-s3backup
 
