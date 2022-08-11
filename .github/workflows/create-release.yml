@@ -7,4 +7,4 @@ on:
     
 jobs:
   build-image:
-    uses: tkhom3/gha-workflows/.github/workflows/build-image-pr.yml@main
+    uses: tkhom3/gha-workflows/.github/workflows/create-release.yml@main
