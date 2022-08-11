@@ -8,6 +8,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    labels:
+      - "release/patch"
 
   # Enable version updates for Docker
   - package-ecosystem: "docker"
@@ -15,6 +17,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    labels:
+      - "release/patch"
       
   # Maintain dependencies for npm
   - package-ecosystem: "pip"
@@ -22,3 +26,5 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    labels:
+      - "release/patch"

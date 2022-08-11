@@ -1,0 +1,10 @@
+name: Create Github Release
+
+on:
+  push:
+    branches:
+      - 'main'
+    
+jobs:
+  build-image:
+    uses: tkhom3/gha-workflows/.github/workflows/build-image-pr.yml@main
