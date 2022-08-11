@@ -1,8 +1,0 @@
-name: Scan with Trivy
-
-on:
-  pull_request:
-  
-jobs:
-  scan-with-trivy:
-    uses: tkhom3/gha-workflows/.github/workflows/scan-with-trivy-pr.yml@main
