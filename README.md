@@ -15,3 +15,4 @@ Mount the directories you would like to backup to the `/backup` directory.
 - S3PATH - S3 bucket and path
 - S3CMDPARAMS - s3cmd custom parameters
 - CRON_SCHEDULE - set to `0 * * * *` by default, which means every hour.
+ 
