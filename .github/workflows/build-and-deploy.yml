@@ -1,11 +1,8 @@
-name: Build and Deploy Image
+name: Build and Deploy Image on Release
 
 on:
-  schedule:
-      - cron: '0 0 * * 0'
-  push:
-    branches:
-      - 'main'
+  release:
+    types: [published]
 
 jobs:
   scan-with-trivy:
@@ -15,4 +12,3 @@ jobs:
   build-and-push-image:
     uses: tkhom3/gha-workflows/.github/workflows/build-and-push-image.yml@main
     secrets: inherit
-      
