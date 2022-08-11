@@ -1,8 +1,11 @@
-name: Build and Deploy Image on Release
+name: Build and Deploy Image
 
 on:
-  release:
-    types: [published]
+  schedule:
+    - cron: '0 0 * * 0'
+  push:
+    branches:
+      - 'main'
 
 jobs:
   scan-with-trivy:
