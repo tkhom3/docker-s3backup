@@ -2,8 +2,8 @@ name: Build and Deploy Image
 
 on:
   push:
-    tags:        
-      - '*' 
+    branches:
+      - 'main'
 
 jobs:
   scan-with-trivy:
