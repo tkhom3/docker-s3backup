@@ -1,7 +1,6 @@
+# docker-s3backup
 [![Build and Deploy Image](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml)
 [![Security Scans](https://github.com/tkhom3/docker-s3backup/actions/workflows/security-scans-pr.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/security-scans-pr.yml)
-
-# docker-s3backup
 
 Sync files and directories to S3 using the s3cmd sync tool.
 
