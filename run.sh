@@ -9,7 +9,7 @@ ACCESS_KEY=${ACCESS_KEY:?"ACCESS_KEY required"}
 SECRET_KEY=${SECRET_KEY:?"SECRET_KEY required"}
 S3PATH=${S3PATH:?"S3_PATH required"}
 CRON_SCHEDULE=${CRON_SCHEDULE:-0 3 * * 6}
-S3CMDPARAMS=${S3CMDPARAMS}
+# S3CMDPARAMS=${S3CMDPARAMS}
 
 LOCKFILE="/tmp/s3cmd.lock"
 LOG="/var/log/s3backup.log"
@@ -37,7 +37,6 @@ if [[ $OPTION = "start" ]]; then
   else
     sed -i 's@secret_key =@secret_key = '"$SECRET_KEY"'@g' /root/.s3cfg
   fi
-  
 
   chmod 600 /root/.s3cfg
 
