@@ -9,7 +9,7 @@ ACCESS_KEY=${ACCESS_KEY:?"ACCESS_KEY required"}
 SECRET_KEY=${SECRET_KEY:?"SECRET_KEY required"}
 S3PATH=${S3PATH:?"S3_PATH required"}
 CRON_SCHEDULE=${CRON_SCHEDULE:-0 3 * * 6}
-# S3CMDPARAMS=${S3CMDPARAMS}
+S3CMDPARAMS=${S3CMDPARAMS}
 
 LOCKFILE="/tmp/s3cmd.lock"
 LOG="/var/log/s3backup.log"
@@ -53,8 +53,8 @@ elif [[ $OPTION = "backup" ]]; then
     touch $LOCKFILE
   fi
 
-  echo "Executing s3cmd $S3CMDPARAMS sync /backup/ $S3PATH" | tee -a $LOG
-  s3cmd $S3CMDPARAMS sync /backup/ $S3PATH 2>&1 | tee -a $LOG
+  echo "Executing s3cmd sync $S3CMDPARAMS /backup/ $S3PATH..." | tee -a $LOG
+  s3cmd sync $S3CMDPARAMS /backup/ $S3PATH 2>&1 | tee -a $LOG
   rm -f $LOCKFILE
   echo "Finished sync: $(date)" | tee -a $LOG
 
