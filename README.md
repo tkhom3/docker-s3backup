@@ -18,4 +18,4 @@ Mount the directories you would like to backup to the `/backup` directory.
 | SECRET_KEY    |             | AWS IAM Secret Key                          |
 | S3PATH        |             | S3 bucket and path                          |
 | S3CMDPARAMS   |             | Custom S3cmd parameters                     |
-| CRON_SCHEDULE | `0 * * * *` | How often a backup should be run using CRON |
+| CRON_SCHEDULE | `0 3 * * 6` | How often a backup should be run using CRON |
