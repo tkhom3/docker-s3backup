@@ -52,8 +52,8 @@ elif [[ $OPTION = "backup" ]]; then
     touch $LOCKFILE
   fi
 
-  echo "Executing s3cmd sync $S3CMDPARAMS /backup/ $S3PATH" | tee -a $LOG
-  s3cmd sync $S3CMDPARAMS /backup/ $S3PATH 2>&1 | tee -a $LOG
+  echo "Executing s3cmd sync -c /root/.s3cfg $S3CMDPARAMS /backup/ $S3PATH" | tee -a $LOG
+  s3cmd sync -c /root/.s3cfg $S3CMDPARAMS /backup/ $S3PATH 2>&1 | tee -a $LOG
   rm -f $LOCKFILE
   echo "Finished sync: $(date)" | tee -a $LOG
 
