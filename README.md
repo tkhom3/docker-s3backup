@@ -9,6 +9,7 @@ Sync files and directories to S3 using the s3cmd sync tool.
 ## Setup
 
 Mount the directories you would like to backup to the `/backup` directory.
+Mount a second directory to `/config` for the cache file./
 
 ## Environment Variables
 
