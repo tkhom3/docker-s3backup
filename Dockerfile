@@ -7,9 +7,9 @@ RUN apk update && apk add --no-cache \
   py3-magic=0.4.24-r1 \
   py3-dateutil=2.8.2-r1
 
-COPY requirements.txt /tmp/
-COPY s3cmd.cfg /tmp/.s3cfg
-COPY run.sh /tmp/
+COPY requirements.txt /
+COPY s3cmd.cfg /.s3cfg
+COPY run.sh /
 
 RUN ["chmod", "+x", "/run.sh"]
 
