@@ -7,16 +7,20 @@ RUN apk update && apk add --no-cache \
   py3-magic=0.4.24-r1 \
   py3-dateutil=2.8.2-r1
 
-COPY requirements.txt /
-COPY s3cmd.cfg /root/.s3cfg
-COPY run.sh /
+COPY requirements.txt /tmp/
+COPY s3cmd.cfg /tmp/.s3cfg
+COPY run.sh /tmp/
 
 RUN ["chmod", "+x", "/run.sh"]
 
 RUN pip install -r /requirements.txt && \
   rm -rf /tmp/pip_build_root/
 
-RUN mkdir -p /backup
+# RUN mkdir -p /backup
+# RUN mkdir -p /config
+
+VOLUME /config
+VOLUME /backup
 
 ENTRYPOINT ["/run.sh"]
 CMD ["start"]
