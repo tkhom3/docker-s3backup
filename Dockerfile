@@ -8,7 +8,7 @@ RUN apk update && apk add --no-cache \
   py3-dateutil=2.8.2-r1
 
 COPY requirements.txt /
-COPY s3cmd.cfg /.s3cfg
+COPY s3cmd.cfg /root/.s3cfg
 COPY run.sh /
 
 RUN ["chmod", "+x", "/run.sh"]
