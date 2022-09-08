@@ -11,12 +11,17 @@ S3PATH=${S3PATH:?"S3_PATH required"}
 CRON_SCHEDULE=${CRON_SCHEDULE:-0 3 * * 6}
 
 LOCKFILE="/tmp/s3cmd.lock"
-LOG="/var/log/s3backup.log"
+LOG="/config/log/s3backup.log"
+CACHE="/config/s3cmd_cache.txt"
 
 trap 'rm -f $LOCKFILE' EXIT
 
 if [ ! -e $LOG ]; then
   touch $LOG
+fi
+
+if [ ! -e $CACHE ]; then
+  touch $CACHE
 fi
 
 if [[ $OPTION = "start" ]]; then
