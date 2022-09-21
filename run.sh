@@ -1,19 +1,21 @@
-#!/bin/bash
+#!/bin/sh
 
 # Set sane bash defaults
-set -o errexit
-set -o pipefail
+# set -o errexit
+# set -o pipefail
 
-OPTION="$1"
+HOME="$1"
+OPTION="$2"
 ACCESS_KEY=${ACCESS_KEY:?"ACCESS_KEY required"}
 SECRET_KEY=${SECRET_KEY:?"SECRET_KEY required"}
 S3PATH=${S3PATH:?"S3_PATH required"}
 CRON_SCHEDULE=${CRON_SCHEDULE:-0 3 * * 6}
 
-LOCKFILE="/tmp/s3cmd.lock"
+LOCKFILE="$HOME/s3cmd.lock"
 LOG="/config/s3backup.log"
 CACHE="/config/s3cmd_cache.txt"
 
+# Cleanup file on exit
 trap 'rm -f $LOCKFILE' EXIT
 
 if [ ! -e $LOG ]; then
@@ -30,22 +32,22 @@ if [[ $OPTION = "start" ]]; then
   ls -F /backup
   echo
 
-  if grep -Fq "$ACCESS_KEY" /root/.s3cfg; then
-    echo "ACCESS_KEY already exists in /root/s3cfg"
+  if grep -Fq "$ACCESS_KEY" $HOME/s3cmd.cfg; then
+    echo "ACCESS_KEY already exists in $HOME/s3cmd.cfg"
   else
-    sed -i 's@access_key =@access_key = '"$ACCESS_KEY"'@g' /root/.s3cfg
+    sed -i 's@access_key =@access_key = '"$ACCESS_KEY"'@g' $HOME/s3cmd.cfg
   fi
   
-  if grep -Fq "$SECRET_KEY" /root/.s3cfg; then
-    echo "SECRET_KEY already exists in /root/s3cfg"
+  if grep -Fq "$SECRET_KEY" $HOME/s3cmd.cfg; then
+    echo "SECRET_KEY already exists in $HOME/s3cmd.cfg"
   else
-    sed -i 's@secret_key =@secret_key = '"$SECRET_KEY"'@g' /root/.s3cfg
+    sed -i 's@secret_key =@secret_key = '"$SECRET_KEY"'@g' $HOME/s3cmd.cfg
   fi
 
-  chmod 600 /root/.s3cfg
+  chmod 600 $HOME/s3cmd.cfg
 
   echo "Running backup on the following CRON schedule: $CRON_SCHEDULE"
-  echo "$CRON_SCHEDULE bash /run.sh backup" | crontab - && crond -f -L /dev/stdout
+  echo "$CRON_SCHEDULE sh /run.sh backup" | crontab - && crond -f -L /dev/stdout
 
 elif [[ $OPTION = "backup" ]]; then
   echo "Starting sync: $(date)" | tee $LOG
@@ -57,8 +59,8 @@ elif [[ $OPTION = "backup" ]]; then
     touch $LOCKFILE
   fi
 
-  echo "Executing s3cmd sync -c /root/.s3cfg $S3CMDPARAMS /backup/ $S3PATH" | tee -a $LOG
-  s3cmd sync -c /root/.s3cfg $S3CMDPARAMS /backup/ $S3PATH 2>&1 | tee -a $LOG
+  echo "Executing s3cmd sync -c $HOME/s3cmd.cfg $S3CMDPARAMS /backup/ $S3PATH" | tee -a $LOG
+  s3cmd sync -c $HOME/s3cmd.cfg $S3CMDPARAMS /backup/ $S3PATH 2>&1 | tee -a $LOG
   rm -f $LOCKFILE
   echo "Finished sync: $(date)" | tee -a $LOG
 
