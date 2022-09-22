@@ -1,15 +1,6 @@
 #!/bin/sh
 
-HOME="$1"
-OPTION="$2"
-ACCESS_KEY=${ACCESS_KEY:?"ACCESS_KEY required"}
-SECRET_KEY=${SECRET_KEY:?"SECRET_KEY required"}
-S3PATH=${S3PATH:?"S3_PATH required"}
-CRON_SCHEDULE=${CRON_SCHEDULE:-0 3 * * 6}
-LOG_LEVEL=${LOG_LEVEL:INFO}
-CACHE_FILE=${CACHE_FILE:/tmp/s3cmd_cache.txt}
-LOG_FILE=${LOG_FILE:/tmp/s3backup.log}
-
+OPTION="$1"
 LOCKFILE="$HOME/s3cmd.lock"
 
 # Cleanup file on exit
@@ -55,7 +46,7 @@ if [[ "$OPTION" = "start" ]]; then
 
 
   echo "Running backup on the following CRON schedule: $CRON_SCHEDULE"
-  echo "$CRON_SCHEDULE sh $HOME/run.sh $HOME backup" | crontab - && crond -f -L /dev/stdout
+  echo "$CRON_SCHEDULE sh $HOME/run.sh backup" | crontab - && crond -f -L /dev/stdout
 
 elif [[ "$OPTION" = "backup" ]]; then
   echo "Starting sync: $(date)" | tee "$LOG_FILE"

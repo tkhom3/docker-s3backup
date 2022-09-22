@@ -2,7 +2,15 @@ FROM alpine:3.16.2
 
 ARG USER=root
 ARG GROUP=root
-ARG HOME=/$USER
+
+ENV HOME=/$USER
+ENV ACCESS_KEY=
+ENV SECRET_KEY=
+ENV S3PATH=
+ENV CRON_SCHEDULE="0 3 * * 6"
+ENV LOG_LEVEL="INFO"
+ENV CACHE_FILE="/tmp/s3cmd_cache.txt"
+ENV LOG_FILE="/tmp/s3backup.log"
 
 RUN apk update && apk add --no-cache \
     bash=5.1.16-r2 \
@@ -29,4 +37,4 @@ RUN chmod 400 requirements.txt && \
 RUN pip install -r requirements.txt --no-cache-dir
 
 ENTRYPOINT ["sh", "run.sh"]
-CMD ["$HOME", "start"]
+CMD ["start"]
