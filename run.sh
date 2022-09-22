@@ -55,24 +55,24 @@ if [[ "$OPTION" = "start" ]]; then
 
 
   echo "Running backup on the following CRON schedule: $CRON_SCHEDULE"
-  echo '"$CRON_SCHEDULE" sh "$HOME/run.sh" "$HOME" backup' | crontab - && crond -f -L /dev/stdout
+  echo "$CRON_SCHEDULE sh $HOME/run.sh $HOME backup" | crontab - && crond -f -L /dev/stdout
 
 elif [[ "$OPTION" = "backup" ]]; then
   echo "Starting sync: $(date)" | tee "$LOG_FILE"
 
   if [ -f "$LOCKFILE" ]; then
-    echo '"$LOCKFILE" detected, exiting! Already running?' | tee -a "$LOG_FILE"
+    echo "$LOCKFILE detected, exiting! Already running?" | tee -a "$LOG_FILE"
     exit 1
   else
     touch "$LOCKFILE"
   fi
 
-  echo 'Executing s3cmd sync -c "$HOME/s3cmd.cfg" "$S3CMDPARAMS" /backup/ "$S3PATH"' | tee -a "$LOG_FILE"
+  echo "Executing s3cmd sync -c $HOME/s3cmd.cfg $S3CMDPARAMS /backup/ $S3PATH" | tee -a "$LOG_FILE"
   s3cmd sync -c "$HOME/s3cmd.cfg" "$S3CMDPARAMS" /backup/ "$S3PATH" 2>&1 | tee -a "$LOG_FILE"
   rm -f "$LOCKFILE"
   echo "Finished sync: $(date)" | tee -a "$LOG_FILE"
 
 else
-  echo 'Unsupported option: "$OPTION"' | tee -a "$LOG_FILE"
+  echo "Unsupported option: $OPTION" | tee -a "$LOG_FILE"
   exit 1
 fi
