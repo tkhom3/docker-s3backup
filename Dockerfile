@@ -29,4 +29,4 @@ RUN chmod 400 requirements.txt && \
 RUN pip install -r requirements.txt --no-cache-dir
 
 ENTRYPOINT ["sh", "run.sh"]
-CMD [$HOME, "start"]
+CMD ["/root", "start"]
