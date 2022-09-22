@@ -54,7 +54,7 @@ if [[ "$OPTION" = "start" ]]; then
   fi
 
 
-  echo 'Running backup on the following CRON schedule: "$CRON_SCHEDULE"'
+  echo "Running backup on the following CRON schedule: $CRON_SCHEDULE"
   echo '"$CRON_SCHEDULE" sh "$HOME/run.sh" "$HOME" backup' | crontab - && crond -f -L /dev/stdout
 
 elif [[ "$OPTION" = "backup" ]]; then
