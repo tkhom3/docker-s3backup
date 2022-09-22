@@ -12,7 +12,7 @@ LOG="/config/s3backup.log"
 CACHE="/config/s3cmd_cache.txt"
 
 # Cleanup file on exit
-trap 'rm -f "$LOCKFILE"' EXIT
+trap "rm -f "$LOCKFILE"" EXIT
 
 if [ ! -e $LOG ]; then
   touch $LOG
