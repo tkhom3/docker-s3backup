@@ -53,6 +53,7 @@ if [[ "$OPTION" = "start" ]]; then
     sed -i 's@verbosity =@verbosity = '"$LOG_LEVEL"'@g' "$HOME/s3cmd.cfg"
   fi
 
+
   echo 'Running backup on the following CRON schedule: "$CRON_SCHEDULE"'
   echo '"$CRON_SCHEDULE" sh "$HOME/run.sh" "$HOME" backup' | crontab - && crond -f -L /dev/stdout
 
