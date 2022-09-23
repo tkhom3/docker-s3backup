@@ -4,7 +4,7 @@
 
 # docker-s3backup
 
-Sync files and directories to S3 using the s3cmd sync tool.
+Sync files and directories to S3 using the s3cmd sync tool. Leverage a cache file for MD5 hash calculations of local files to speed up performance.
 
 ## Setup
 
