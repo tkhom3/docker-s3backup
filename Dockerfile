@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM alpine:3.17.0
 
 ARG USER=root
 ARG GROUP=root
@@ -13,11 +13,11 @@ ENV CACHE_FILE="/tmp/s3cmd_cache.txt"
 ENV LOG_FILE="/tmp/s3backup.log"
 
 RUN apk update && apk add --no-cache \
-    bash=5.1.16-r2 \
-    py3-pip=22.1.1-r0 \
-    python3=3.10.5-r0 \
-    py3-magic=0.4.24-r1 \
-    py3-dateutil=2.8.2-r1
+    bash \
+    py3-pip \
+    python3 \
+    py3-magic \
+    py3-dateutil
 
 RUN mkdir /config /backup && \
     chown $USER:$GROUP /config /backup && \
