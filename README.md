@@ -1,6 +1,5 @@
 [![Build and Deploy Image](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml)
 [![Security Scans](https://github.com/tkhom3/docker-s3backup/actions/workflows/security-scans-pr.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/security-scans-pr.yml)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0937ad658d67431797912abd534f4511)](https://www.codacy.com/gh/tkhom3/docker-s3backup/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tkhom3/docker-s3backup&amp;utm_campaign=Badge_Grade)
 
 # docker-s3backup
 
