@@ -1,2 +1,2 @@
-#Container needs to run as root
-DS002
+DS002 #Container needs to run as root
+DS026 #Ignore healthcheck
