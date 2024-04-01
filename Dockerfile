@@ -7,10 +7,7 @@ ENV HOME=/$USER
 ENV ACCESS_KEY=
 ENV SECRET_KEY=
 ENV S3PATH=
-ENV CRON_SCHEDULE="0 3 * * 6"
-ENV LOG_LEVEL="INFO"
-ENV CACHE_FILE="/tmp/s3cmd_cache.txt"
-ENV LOG_FILE="/tmp/s3backup.log"
+
 
 RUN apk update && apk add --no-cache \
     bash==5.2.21-r0 \
