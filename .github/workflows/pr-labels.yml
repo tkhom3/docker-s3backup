@@ -19,7 +19,7 @@ jobs:
             create_credentials_file: 'true'
             workload_identity_provider: 'principal://iam.googleapis.com/projects/54512176279/locations/global/workloadIdentityPools/github-com/providers/github-com'
             service_account: 'gsec-ma-cloud-metrics-iac@gcp-gsec-prod.iam.gserviceaccount.com'
-      - id: 'access-secret'
+      - id: 'list'
         run: |-
-          curl https://secretmanager.googleapis.com/v1/projects/54512176279/secrets/my-secret/versions/1:access \
+          curl https://iam.googleapis.com/v1/projects/54512176279/serviceAccounts \
             --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
