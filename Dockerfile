@@ -20,11 +20,6 @@ RUN apk update && apk add --no-cache \
     s3cmd==2.4.0-r0 \
     --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
 
-RUN mkdir /config /backup && \
-    chown $USER:$GROUP /config /backup && \
-    chmod 400 /backup && \
-    chmod 600 /config
-
 WORKDIR $HOME
 
 COPY --chown=$USER:$GROUP s3cmd.cfg .
