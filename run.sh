@@ -14,11 +14,6 @@ if [ ! -e "$CACHE_FILE" ]; then
   touch "$CACHE_FILE"
 fi
 
-if [[ "$OPTION" = "start" ]]; then
-  echo "Found the following files to sync:"
-  echo
-  ls -F /backup
-  echo
 
   if grep -Fq "$ACCESS_KEY" "$HOME/s3cmd.cfg"; then
     echo "ACCESS_KEY already exists in $HOME/s3cmd.cfg"
