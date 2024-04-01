@@ -10,10 +10,6 @@ if [ ! -e "$LOG_FILE" ]; then
   touch "$LOG_FILE"
 fi
 
-if [ ! -e "$CACHE_FILE" ]; then
-  touch "$CACHE_FILE"
-fi
-
 if [[ "$OPTION" = "start" ]]; then
   echo "Found the following files to sync:"
   echo
