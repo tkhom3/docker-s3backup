@@ -1,4 +1,4 @@
-FROM alpine:3.20.2
+FROM alpine:3.20.3
 
 ARG USER=root
 ARG GROUP=root
@@ -14,7 +14,7 @@ ENV LOG_FILE="/tmp/s3backup.log"
 
 RUN apk update && apk add --no-cache \
     bash==5.2.26-r0 \
-    python3==3.12.3-r1 \
+    python3==3.12.7-r0 \
     py3-magic==0.4.27-r3 \
     py3-dateutil==2.9.0-r1 \
     s3cmd==2.4.0-r1 \
