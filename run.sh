@@ -49,7 +49,7 @@ if [[ "$OPTION" = "start" ]]; then
   echo "$CRON_SCHEDULE sh $HOME/run.sh backup" | crontab - && crond -f -L /dev/stdout
 
 elif [[ "$OPTION" = "backup" ]]; then
-  echo "Starting sync: $(date)" | tee "$LOG_FILE"
+  echo "Starting sync: $(date)" | tee -a "$LOG_FILE"
 
   if [ -f "$LOCKFILE" ]; then
     echo "$LOCKFILE detected, exiting! Already running?" | tee -a "$LOG_FILE"
