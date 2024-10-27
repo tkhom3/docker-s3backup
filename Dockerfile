@@ -13,8 +13,8 @@ ENV CACHE_FILE="/tmp/s3cmd_cache.txt"
 ENV LOG_FILE="/tmp/s3backup.log"
 
 RUN apk update && apk add --no-cache \
-    bash==5.2.26-r0 \
-    python3==3.12.3-r1 \
+    bash==5.2.37-r0 \
+    python3==3.12.7-r1 \
     py3-magic==0.4.27-r3 \
     py3-dateutil==2.9.0-r1 \
     s3cmd==2.4.0-r1 \
