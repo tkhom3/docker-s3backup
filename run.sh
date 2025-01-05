@@ -42,6 +42,6 @@ echo "Found the following directories to sync:"
 ls -F $BACKUP_DIR
 echo "----------------------------------------"
 
-echo "$CRON_SCHEDULE s3cmd sync -c $APP_DIR/s3cmd.cfg --cache-file=$APP_DIR/$CACHE_FILE $BACKUP_DIR/ $S3PATH" >> "$APP_DIR/crontab"
+echo "$CRON_SCHEDULE s3cmd sync -c $APP_DIR/s3cmd.cfg --cache-file=$APP_DIR/$CACHE_FILE $ADD $BACKUP_DIR/ $S3PATH" >> "$APP_DIR/crontab"
 # supercronic -split-logs -debug crontab 1>$APP_DIR/$LOG_FILE
 supercronic -debug crontab
