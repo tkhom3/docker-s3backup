@@ -37,4 +37,5 @@ RUN pip install --requirement /tmp/requirements.txt
 
 USER $USER
 
-ENTRYPOINT ["sh", "run.sh"]
+# ENTRYPOINT ["sh", "run.sh"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
