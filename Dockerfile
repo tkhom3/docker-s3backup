@@ -1,8 +1,8 @@
 FROM python:3.12.8-alpine3.21
 
 ENV USER="s3backup"
-ENV UID="100"
-ENV GID="99"
+ENV UID="99"
+ENV GID="100"
 ENV APP_DIR="/s3backup"
 ENV BACKUP_DIR="/backup"
 ENV ACCESS_KEY=
