@@ -14,7 +14,7 @@ if [ ! -e "$APP_DIR/$CACHE_FILE" ]; then
   touch "$APP_DIR/$CACHE_FILE"
 fi
 
-if [[ "$OPTION" = "start" ]]; then
+if [ "$OPTION" = "start" ]; then
   echo "Found the following files to sync:"
   echo
   ls -F $BACKUP_DIR
@@ -48,7 +48,7 @@ if [[ "$OPTION" = "start" ]]; then
   echo "Running backup on the following CRON schedule: $CRON_SCHEDULE"
   echo "$CRON_SCHEDULE sh $APP_DIR/run.sh backup" | crontab - && crond -f -L /dev/stdout
 
-elif [[ "$OPTION" = "backup" ]]; then
+elif [ "$OPTION" = "backup" ]; then
   echo "Starting sync: $(date)" | tee -a "$APP_DIR/$LOG_FILE"
 
   if [ -f "$LOCKFILE" ]; then
