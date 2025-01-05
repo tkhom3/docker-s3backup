@@ -19,10 +19,9 @@ RUN apk update && apk add --no-cache \
 
 RUN useradd -m $USER_NAME
 
-# RUN mkdir $APP_DIR $BACKUP_DIR && \
-#     chown $USER:$GROUP $APP_DIR $BACKUP_DIR && \
-#     chmod 440 $BACKUP_DIR && \
-#     chmod 770 $APP_DIR
+RUN chown $USER_NAME:$GROUP $APP_DIR $BACKUP_DIR && \
+    chmod 440 $BACKUP_DIR && \
+    chmod 770 $APP_DIR
 
 WORKDIR /home/$USER_NAME
 
