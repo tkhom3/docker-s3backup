@@ -1,8 +1,8 @@
 FROM python:3.12.8-alpine3.21
 
-ARG USER_NAME=s3backup
-ARG GROUP=s3backup
-
+ENV USER="s3backup"
+ENV UID="100"
+ENV GID="99"
 ENV APP_DIR="/s3backup"
 ENV BACKUP_DIR="/backup"
 ENV ACCESS_KEY=
@@ -17,24 +17,26 @@ RUN apk update && apk add --no-cache \
     supercronic \
     shadow
 
-RUN useradd -m $USER_NAME
+RUN useradd -m $USER
 
-RUN chown $USER_NAME:$GROUP $APP_DIR $BACKUP_DIR && \
-    chmod 440 $BACKUP_DIR && \
-    chmod 770 $APP_DIR
+WORKDIR /tmp
 
-WORKDIR /home/$USER_NAME
+COPY init-update-user.sh .
+RUN chmod 500 init-update-user.sh && \
+    ./init-update-user.sh && \
+    rm init-update-user.sh
 
-COPY --chown=$USER_NAME:$GROUP s3cmd.cfg .
-COPY --chown=$USER_NAME:$GROUP run.sh .
+WORKDIR /home/$USER
 
+COPY --chown=$USER:$USER s3cmd.cfg .
+COPY --chown=$USER:$USER run.sh .
 RUN chmod 554 run.sh && \
     chmod 664 s3cmd.cfg
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-USER $USER_NAME
+USER $USER
 
 # ENTRYPOINT ["sh", "run.sh"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]
