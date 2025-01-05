@@ -19,12 +19,12 @@ RUN apk update && apk add --no-cache \
 
 RUN useradd -m $USER
 
-RUN mkdir $APP_DIR $BACKUP_DIR && \
-    chown $USER:$GROUP $APP_DIR $BACKUP_DIR && \
-    chmod 440 $BACKUP_DIR && \
-    chmod 770 $APP_DIR
+# RUN mkdir $APP_DIR $BACKUP_DIR && \
+#     chown $USER:$GROUP $APP_DIR $BACKUP_DIR && \
+#     chmod 440 $BACKUP_DIR && \
+#     chmod 770 $APP_DIR
 
-WORKDIR $APP_DIR
+WORKDIR /home/$USER
 
 COPY --chown=$USER:$GROUP s3cmd.cfg .
 COPY --chown=$USER:$GROUP run.sh .
@@ -32,8 +32,8 @@ COPY --chown=$USER:$GROUP run.sh .
 RUN chmod 554 run.sh && \
     chmod 664 s3cmd.cfg
 
-COPY requirements.txt /tmp/
-RUN pip install --requirement /tmp/requirements.txt
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 USER $USER
 
