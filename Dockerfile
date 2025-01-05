@@ -1,37 +1,33 @@
-FROM alpine:3.21.0
+FROM python:3.12.8-slim
 
 ARG USER=root
 ARG GROUP=root
 
-ENV HOME=/$USER
+ENV APP_DIR="/s3backup"
+ENV BACKUP_DIR="/backup"
 ENV ACCESS_KEY=
 ENV SECRET_KEY=
 ENV S3PATH=
 ENV CRON_SCHEDULE="0 3 * * 6"
 ENV LOG_LEVEL="INFO"
-ENV CACHE_FILE="/tmp/s3cmd_cache.txt"
-ENV LOG_FILE="/tmp/s3backup.log"
+ENV CACHE_FILE="s3cmd_cache.txt"
+ENV LOG_FILE="s3backup.log"
 
-RUN apk update && apk add --no-cache \
-    bash==5.2.37-r0 \
-    python3==3.12.8-r1 \
-    py3-magic==0.4.27-r3 \
-    py3-dateutil==2.9.0-r1 \
-    s3cmd==2.4.0-r1 \
-    --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
+RUN mkdir $APP_DIR $BACKUP_DIR && \
+    chown $USER:$GROUP $APP_DIR $BACKUP_DIR && \
+    chmod 400 $BACKUP_DIR && \
+    chmod 600 $APP_DIR
 
-RUN mkdir /config /backup && \
-    chown $USER:$GROUP /config /backup && \
-    chmod 400 /backup && \
-    chmod 600 /config
-
-WORKDIR $HOME
+WORKDIR $APP_DIR
 
 COPY --chown=$USER:$GROUP s3cmd.cfg .
-COPY --chown=$USER:$GROUP run.sh .
+COPY --chown=$USER:$GROUP run.sh /tmp/run.sh
 
-RUN chmod 500 run.sh && \
-    chmod 600 s3cmd.cfg
+RUN chmod 500 /tmp/run.sh && \
+    chmod 600 $APP_DIR/s3cmd.cfg
 
-ENTRYPOINT ["sh", "run.sh"]
+COPY requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+
+ENTRYPOINT ["sh", "tmp", "run.sh"]
 CMD ["start"]
