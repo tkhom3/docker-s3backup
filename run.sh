@@ -46,7 +46,7 @@ if [[ "$OPTION" = "start" ]]; then
 
 
   echo "Running backup on the following CRON schedule: $CRON_SCHEDULE"
-  echo "$CRON_SCHEDULE sh tmp/run.sh backup" | crontab - && crond -f -L /dev/stdout
+  echo "$CRON_SCHEDULE sh $APP_DIR/run.sh backup" | crontab - && crond -f -L /dev/stdout
 
 elif [[ "$OPTION" = "backup" ]]; then
   echo "Starting sync: $(date)" | tee -a "$APP_DIR/$LOG_FILE"

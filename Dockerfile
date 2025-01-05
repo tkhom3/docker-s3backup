@@ -21,13 +21,13 @@ RUN mkdir $APP_DIR $BACKUP_DIR && \
 WORKDIR $APP_DIR
 
 COPY --chown=$USER:$GROUP s3cmd.cfg .
-COPY --chown=$USER:$GROUP run.sh /tmp/run.sh
+COPY --chown=$USER:$GROUP run.sh .
 
-RUN chmod 500 /tmp/run.sh && \
-    chmod 600 $APP_DIR/s3cmd.cfg
+RUN chmod 500 run.sh && \
+    chmod 600 s3cmd.cfg
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
-ENTRYPOINT ["sh", "tmp", "run.sh"]
+ENTRYPOINT ["sh", "run.sh"]
 CMD ["start"]
