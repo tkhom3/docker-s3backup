@@ -1,8 +1,8 @@
 FROM python:3.12.8-alpine3.21
 
-ARG USER=s3backup
-ARG GROUP=s3backup
-
+ENV USER="s3backup"
+ENV UID="100"
+ENV GID="99"
 ENV APP_DIR="/s3backup"
 ENV BACKUP_DIR="/backup"
 ENV ACCESS_KEY=
@@ -19,16 +19,17 @@ RUN apk update && apk add --no-cache \
 
 RUN useradd -m $USER
 
-# RUN mkdir $APP_DIR $BACKUP_DIR && \
-#     chown $USER:$GROUP $APP_DIR $BACKUP_DIR && \
-#     chmod 440 $BACKUP_DIR && \
-#     chmod 770 $APP_DIR
+WORKDIR /tmp
+
+COPY init-update-user.sh .
+RUN chmod 500 init-update-user.sh && \
+    ./init-update-user.sh && \
+    rm init-update-user.sh
 
 WORKDIR /home/$USER
 
-COPY --chown=$USER:$GROUP s3cmd.cfg .
-COPY --chown=$USER:$GROUP run.sh .
-
+COPY --chown=$USER:$USER s3cmd.cfg .
+COPY --chown=$USER:$USER run.sh .
 RUN chmod 554 run.sh && \
     chmod 664 s3cmd.cfg
 
