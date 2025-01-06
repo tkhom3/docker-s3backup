@@ -43,5 +43,4 @@ ls -F $BACKUP_DIR
 echo "----------------------------------------"
 
 echo "$CRON_SCHEDULE s3cmd sync -c /home/$USER/s3cmd.cfg --cache-file=$APP_DIR/$CACHE_FILE $BACKUP_DIR/ $S3PATH" >> "/home/$USER/crontab"
-# supercronic -split-logs -debug crontab 1>$APP_DIR/$LOG_FILE
-supercronic -debug crontab
+supercronic -split-logs crontab 1>$APP_DIR/$LOG_FILE
