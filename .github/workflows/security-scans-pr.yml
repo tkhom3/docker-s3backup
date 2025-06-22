@@ -6,5 +6,5 @@ on:
       - '.github/**'
 
 jobs:
-  scan-with-trivy:
-    uses: tkhom3/gha-workflows/.github/workflows/scan-with-trivy-pr.yml@main
+ generate-sbom:
+    uses: tkhom3/gha-workflows/.github/workflows/generate-sbom.yml@main
