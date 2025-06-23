@@ -1,0 +1,8 @@
+name: Automerge Release PRs
+
+on:
+  pull_request:
+    
+jobs:
+  build-image:
+    uses: tkhom3/gha-workflows/.github/workflows/automerge-release.yml@main
