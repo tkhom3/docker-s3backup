@@ -8,8 +8,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    labels:
-      - "release/patch"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "feat: "
 
   # Enable version updates for Docker
   - package-ecosystem: "docker"
@@ -17,13 +18,15 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    labels:
-      - "release/patch"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "feat: "
 
   # Enable version updates for pip
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
-    labels:
-      - "release/patch"      
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "feat: "
