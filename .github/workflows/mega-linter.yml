@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
+      checks: write
       contents: write
       issues: write
       pull-requests: write
@@ -74,7 +75,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: >-
             ${{
               github.event_name == 'push' &&
-              contains(fromJSON('["refs/heads/main", "refs/heads/master"]'), github.ref)
+              contains(fromJSON('["refs/heads/main"]'), github.ref)
             }}
 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
