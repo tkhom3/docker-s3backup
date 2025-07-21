@@ -1,2 +1,3 @@
 DS002 #Container needs to run as root
 DS026 #Ignore healthcheck
+DS0031 #Ignore secrets being passed in, required for unraid
