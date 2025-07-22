@@ -50,7 +50,7 @@ jobs:
 
         # You can override MegaLinter flavor used to have faster performances
         # More info at https://megalinter.io/latest/flavors/
-        uses: oxsecurity/megalinter@v8
+        uses: oxsecurity/megalinter/flavors/ci_light@v8.8.0
 
         id: ml
 
@@ -65,10 +65,10 @@ jobs:
           #
           # To validate only diff with main, set to:
           # VALIDATE_ALL_CODEBASE: >-
-          #   ${{
+          #   ${ {
           #     github.event_name == 'push' &&
-          #     contains(fromJSON('["refs/heads/main", "refs/heads/master"]'), github.ref)
-          #   }}
+          #     contains(fromJSON('["refs/heads/main"]'), github.ref)
+          #   } }
           VALIDATE_ALL_CODEBASE: >-
             ${{
               github.event_name == 'push' &&
@@ -76,6 +76,7 @@ jobs:
             }}
 
           GITHUB_TOKEN: ${{ secrets.GHA_PAT }}
+
 
       - name: Archive production artifacts
         if: success() || failure()
@@ -138,7 +139,7 @@ jobs:
         run: sudo chown -Rc $UID .git/
 
       - name: Commit and push applied linter fixes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v6
         if: env.APPLY_FIXES_IF_COMMIT == 'true'
         with:
           branch: >-
