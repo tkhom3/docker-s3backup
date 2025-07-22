@@ -1,0 +1,80 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:d78309d1-84fb-444e-bdc5-563fd351e98d",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-07-22T02:35:56+00:00",
+        "tools": {
+            "components": [
+                {
+                    "type": "application",
+                    "group": "aquasecurity",
+                    "name": "trivy",
+                    "version": "0.63.0"
+                }
+            ]
+        },
+        "component": {
+            "bom-ref": "f23947bb-c1b3-442c-aba3-9c5d1b4b684f",
+            "type": "application",
+            "name": ".",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:SchemaVersion",
+                    "value": "2"
+                }
+            ]
+        }
+    },
+    "components": [
+        {
+            "bom-ref": "bf4fbb50-48ba-4f9e-a124-e4ec4f3178bf",
+            "type": "application",
+            "name": "requirements.txt",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:Class",
+                    "value": "lang-pkgs"
+                },
+                {
+                    "name": "aquasecurity:trivy:Type",
+                    "value": "pip"
+                }
+            ]
+        },
+        {
+            "bom-ref": "pkg:pypi/s3cmd@2.4.0",
+            "type": "library",
+            "name": "s3cmd",
+            "version": "2.4.0",
+            "purl": "pkg:pypi/s3cmd@2.4.0",
+            "properties": [
+                {
+                    "name": "aquasecurity:trivy:PkgType",
+                    "value": "pip"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "bf4fbb50-48ba-4f9e-a124-e4ec4f3178bf",
+            "dependsOn": [
+                "pkg:pypi/s3cmd@2.4.0"
+            ]
+        },
+        {
+            "ref": "f23947bb-c1b3-442c-aba3-9c5d1b4b684f",
+            "dependsOn": [
+                "bf4fbb50-48ba-4f9e-a124-e4ec4f3178bf"
+            ]
+        },
+        {
+            "ref": "pkg:pypi/s3cmd@2.4.0",
+            "dependsOn": []
+        }
+    ],
+    "vulnerabilities": []
+}
