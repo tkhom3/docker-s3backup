@@ -1,5 +1,18 @@
 # Changelog
 
+## [5.3.0](https://github.com/tkhom3/docker-s3backup/compare/v5.2.0...v5.3.0) (2025-07-22)
+
+
+### Features
+
+* bump stefanzweifel/git-auto-commit-action from 4 to 6 ([06f46ab](https://github.com/tkhom3/docker-s3backup/commit/06f46abc2761d9e06a261160d53fffa491a7fac5))
+* bump stefanzweifel/git-auto-commit-action from 4 to 6 ([1a47b82](https://github.com/tkhom3/docker-s3backup/commit/1a47b82186f01d87c00533c8b7ddb5e849d5a35a))
+
+
+### Bug Fixes
+
+* update linters ([0a7bb88](https://github.com/tkhom3/docker-s3backup/commit/0a7bb8852387aac00085dade60efe49f341aff35))
+
 ## [5.2.0](https://github.com/tkhom3/docker-s3backup/compare/v5.1.13...v5.2.0) (2025-06-22)
 
 
