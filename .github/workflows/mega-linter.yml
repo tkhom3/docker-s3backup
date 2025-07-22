@@ -76,7 +76,7 @@ jobs:
             }}
 
           GITHUB_TOKEN: ${{ secrets.GHA_PAT }}
-          REPORTERS: "github_check"
+          REPORTERS: github
 
       - name: Archive production artifacts
         if: success() || failure()
