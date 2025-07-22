@@ -105,7 +105,7 @@
         {
             "descriptor_id": "COPYPASTE",
             "descriptor_type": "other",
-            "elapsed_time_s": 1.192846419999995,
+            "elapsed_time_s": 1.1657788139999994,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -122,7 +122,7 @@
         {
             "descriptor_id": "JSON",
             "descriptor_type": "format",
-            "elapsed_time_s": 0.3244015530000013,
+            "elapsed_time_s": 0.3573032479999938,
             "files": [
                 "megalinter-reports/IDE-config/.devskim.json",
                 "megalinter-reports/IDE-config/.jscpd.json",
@@ -135,7 +135,9 @@
                 "megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
                 "megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
                 "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
-                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json"
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json"
             ],
             "files_lint_results": [
                 {
@@ -245,9 +247,27 @@
                     "status_code": null,
                     "stdout": null,
                     "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
                 }
             ],
-            "files_number": 12,
+            "files_number": 14,
             "is_active": true,
             "linter_name": "jsonlint",
             "name": "JSON_JSONLINT",
@@ -261,7 +281,7 @@
         {
             "descriptor_id": "JSON",
             "descriptor_type": "format",
-            "elapsed_time_s": 0.7789702100000113,
+            "elapsed_time_s": 0.8028967730000005,
             "files": [
                 "megalinter-reports/IDE-config/.devskim.json",
                 "megalinter-reports/IDE-config/.jscpd.json",
@@ -277,7 +297,10 @@
                 "megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
                 "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/IDE-config/.vscode/extensions.json",
                 "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
-                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json"
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/IDE-config/.vscode/extensions.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json"
             ],
             "files_lint_results": [
                 {
@@ -414,14 +437,41 @@
                     "status_code": null,
                     "stdout": null,
                     "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/IDE-config/.vscode/extensions.json",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
+                    "fixed": true,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
                 }
             ],
-            "files_number": 15,
+            "files_number": 18,
             "is_active": true,
             "linter_name": "prettier",
             "name": "JSON_PRETTIER",
             "number_errors": 0,
-            "number_fixed": 11,
+            "number_fixed": 14,
             "return_code": 0,
             "status": "success",
             "total_number_errors": 0,
@@ -430,7 +480,7 @@
         {
             "descriptor_id": "JSON",
             "descriptor_type": "format",
-            "elapsed_time_s": 3.413111593000025,
+            "elapsed_time_s": 4.481260284000001,
             "files": [
                 "megalinter-reports/IDE-config/.devskim.json",
                 "megalinter-reports/IDE-config/.jscpd.json",
@@ -446,7 +496,10 @@
                 "megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
                 "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/IDE-config/.vscode/extensions.json",
                 "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
-                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json"
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/IDE-config/.vscode/extensions.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
+                "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json"
             ],
             "files_lint_results": [
                 {
@@ -583,9 +636,36 @@
                     "status_code": null,
                     "stdout": null,
                     "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/IDE-config/.vscode/extensions.json",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/mega-linter-report.json",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
+                },
+                {
+                    "errors_number": null,
+                    "file": "megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/updated_sources/megalinter-reports/sbom/trivy.json",
+                    "fixed": false,
+                    "status": null,
+                    "status_code": null,
+                    "stdout": null,
+                    "warnings_number": null
                 }
             ],
-            "files_number": 15,
+            "files_number": 18,
             "is_active": true,
             "linter_name": "v8r",
             "name": "JSON_V8R",
@@ -599,7 +679,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 0.12252636699997765,
+            "elapsed_time_s": 0.13018446600000289,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -616,7 +696,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 0.19773984099998643,
+            "elapsed_time_s": 0.3482972320000002,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -633,7 +713,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 24.785070272000013,
+            "elapsed_time_s": 25.249900840000002,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -650,7 +730,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 0.47135380100002067,
+            "elapsed_time_s": 0.4718329469999958,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -667,7 +747,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 1.0733521630000382,
+            "elapsed_time_s": 1.0713162189999963,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -684,7 +764,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 6.768913466000015,
+            "elapsed_time_s": 7.022756921999999,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -701,7 +781,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 0.11428240300000425,
+            "elapsed_time_s": 0.11206304099999898,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -718,7 +798,7 @@
         {
             "descriptor_id": "REPOSITORY",
             "descriptor_type": "other",
-            "elapsed_time_s": 2.402202836000015,
+            "elapsed_time_s": 2.4555306160000043,
             "files": [],
             "files_lint_results": [],
             "files_number": 0,
@@ -735,7 +815,7 @@
         {
             "descriptor_id": "YAML",
             "descriptor_type": "format",
-            "elapsed_time_s": 0.44908946900000046,
+            "elapsed_time_s": 0.4583089399999949,
             "files": [
                 ".mega-linter.yml",
                 "megalinter-reports/IDE-config/.checkov.yml",
@@ -804,7 +884,7 @@
         {
             "descriptor_id": "YAML",
             "descriptor_type": "format",
-            "elapsed_time_s": 3.3017826739999805,
+            "elapsed_time_s": 4.225926084999998,
             "files": [
                 ".mega-linter.yml",
                 "megalinter-reports/IDE-config/.checkov.yml",
@@ -873,7 +953,7 @@
         {
             "descriptor_id": "YAML",
             "descriptor_type": "format",
-            "elapsed_time_s": 0.43991778400001635,
+            "elapsed_time_s": 0.3764396219999995,
             "files": [
                 ".mega-linter.yml",
                 "megalinter-reports/IDE-config/.checkov.yml",

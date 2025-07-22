@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:03dd9813-9be5-4c7b-9bf4-58d9f258b959",
+    "serialNumber": "urn:uuid:6d961926-4a2e-46d2-9580-8e7864c1f4c2",
     "version": 1,
     "metadata": {
-        "timestamp": "2025-07-22T02:29:12+00:00",
+        "timestamp": "2025-07-22T02:30:38+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "ad25088b-bbe6-4d8d-a6c6-6733aa9cdbfa",
+            "bom-ref": "c0ae2f15-3bcc-4cc0-9abe-e3abd00dba55",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "10597531-dcce-460f-ba33-74cc02f752e8",
+            "bom-ref": "a47c9fa3-5789-4077-bb86-c8096cca6ac0",
             "type": "application",
             "name": "requirements.txt",
             "properties": [
@@ -60,15 +60,15 @@
     ],
     "dependencies": [
         {
-            "ref": "10597531-dcce-460f-ba33-74cc02f752e8",
+            "ref": "a47c9fa3-5789-4077-bb86-c8096cca6ac0",
             "dependsOn": [
                 "pkg:pypi/s3cmd@2.4.0"
             ]
         },
         {
-            "ref": "ad25088b-bbe6-4d8d-a6c6-6733aa9cdbfa",
+            "ref": "c0ae2f15-3bcc-4cc0-9abe-e3abd00dba55",
             "dependsOn": [
-                "10597531-dcce-460f-ba33-74cc02f752e8"
+                "a47c9fa3-5789-4077-bb86-c8096cca6ac0"
             ]
         },
         {
