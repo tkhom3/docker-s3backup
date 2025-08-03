@@ -1,5 +1,7 @@
 FROM python:3.13.5-alpine3.21
 
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+
 ENV USER="s3backup"
 ENV UID="99"
 ENV GID="100"
