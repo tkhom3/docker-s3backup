@@ -1,4 +1,4 @@
-FROM python:3.13.5-slim-bookworm
+FROM python:3.13.5-alpine3.21
 
 ENV USER="s3backup"
 ENV UID="99"
@@ -15,7 +15,8 @@ ENV LOG_FILE="s3backup.log"
 
 RUN apk update && apk add --no-cache \
     supercronic \
-    shadow
+    shadow \
+    curl
 
 RUN useradd -m $USER
 
@@ -33,8 +34,12 @@ COPY --chown=$USER:$USER run.sh .
 RUN chmod 554 run.sh && \
     chmod 664 s3cmd.cfg
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY --chown=$USER:$USER *.toml ./
+COPY --chown=$USER:$USER poetry.lock* ./
+
+RUN curl -sSL https://install.python-poetry.org | python3 - && \
+    export PATH="/root/.local/bin:$PATH" && \
+    poetry install --no-interaction --no-ansi --no-root
 
 USER $USER
 

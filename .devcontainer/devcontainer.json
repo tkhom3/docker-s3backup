@@ -7,7 +7,14 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "ms-azuretools.vscode-docker",
-                "redhat.vscode-yaml"
+                "redhat.vscode-yaml",
+                "ms-azuretools.vscode-containers",
+                "docker.docker",
+                "github.vscode-github-actions",
+                "GitHub.vscode-codeql",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "oderwat.indent-rainbow"
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/usr/local/bin/python",
@@ -25,5 +32,5 @@
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/git:1": {}
     },
-    "postCreateCommand": "pip install -r requirements.txt"
+    "postCreateCommand": "bash .devcontainer/post-build.sh"
 }
