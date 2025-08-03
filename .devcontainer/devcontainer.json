@@ -1,0 +1,36 @@
+{
+    "name": "Python Docker S3 Backup",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker",
+                "redhat.vscode-yaml",
+                "ms-azuretools.vscode-containers",
+                "docker.docker",
+                "github.vscode-github-actions",
+                "GitHub.vscode-codeql",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "oderwat.indent-rainbow"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.provider": "black"
+            }
+        }
+    },
+    "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.13"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "postCreateCommand": "bash .devcontainer/post-build.sh"
+}
