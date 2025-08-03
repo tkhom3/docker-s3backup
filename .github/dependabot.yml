@@ -1,18 +1,13 @@
-# Basic dependabot.yml file with
-# minimum configuration for two package managers
-
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "feat: "
+      prefix: "fix: "
 
-  # Enable version updates for Docker
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in the `root` directory
     directory: "/"
@@ -20,13 +15,20 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "feat: "
+      prefix: "fix: "
 
-  # Enable version updates for pip
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "fix: "
+
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "feat: "
+      prefix: "fix: "
