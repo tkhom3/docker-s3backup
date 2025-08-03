@@ -15,6 +15,47 @@
         {
             "properties": {
                 "megalinter": {
+                    "docUrl": "https://megalinter.io/8.8.0/descriptors/bash_shellcheck",
+                    "linterKey": "BASH_SHELLCHECK",
+                    "linterVersion": "0.10.0"
+                }
+            },
+            "results": [],
+            "tool": {
+                "driver": {
+                    "informationUri": "https://megalinter.io/8.8.0/descriptors/bash_shellcheck",
+                    "name": "shellcheck (MegaLinter BASH_SHELLCHECK)",
+                    "rules": [],
+                    "version": "0.10.0"
+                }
+            }
+        },
+        {
+            "defaultSourceLanguage": "dockerfile",
+            "properties": {
+                "megalinter": {
+                    "docUrl": "https://megalinter.io/8.8.0/descriptors/dockerfile_hadolint",
+                    "linterKey": "DOCKERFILE_HADOLINT",
+                    "linterVersion": "2.12.0"
+                }
+            },
+            "results": [],
+            "tool": {
+                "driver": {
+                    "downloadUri": "https://github.com/hadolint/hadolint",
+                    "fullName": "Haskell Dockerfile Linter",
+                    "informationUri": "https://megalinter.io/8.8.0/descriptors/dockerfile_hadolint",
+                    "name": "Hadolint (MegaLinter DOCKERFILE_HADOLINT)",
+                    "shortDescription": {
+                        "text": "Dockerfile linter, validate inline bash, written in Haskell"
+                    },
+                    "version": "2.12.0"
+                }
+            }
+        },
+        {
+            "properties": {
+                "megalinter": {
                     "docUrl": "https://megalinter.io/8.8.0/descriptors/repository_gitleaks",
                     "linterKey": "REPOSITORY_GITLEAKS",
                     "linterVersion": "8.27.2"
@@ -1322,7 +1363,7 @@
             "tool": {
                 "driver": {
                     "informationUri": "https://github.com/anchore/grype",
-                    "name": "grype (MegaLinter REPOSITORY_GRYPE)",
+                    "name": "grype (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE)",
                     "version": "0.94.0"
                 }
             }
@@ -1340,7 +1381,7 @@
             "tool": {
                 "driver": {
                     "informationUri": "https://github.com/secretlint/secretlint",
-                    "name": "secretlint (MegaLinter REPOSITORY_SECRETLINT)",
+                    "name": "secretlint (MegaLinter REPOSITORY_SECRETLINT) (MegaLinter REPOSITORY_SECRETLINT)",
                     "rules": [],
                     "version": "1.0.0"
                 }
@@ -1376,11 +1417,40 @@
                                 "type": "evident-by"
                             },
                             {
+                                "child": "88989219445b7af0",
+                                "metadata": {
+                                    "kind": "primary"
+                                },
+                                "parent": "2bd42fead3efa513",
+                                "type": "evident-by"
+                            },
+                            {
+                                "child": "4490038dd0eaaf1f",
+                                "metadata": {
+                                    "kind": "primary"
+                                },
+                                "parent": "2e6e457c30134f16",
+                                "type": "evident-by"
+                            },
+                            {
+                                "child": "fb7ce76208859230",
+                                "parent": "2e6e457c30134f16",
+                                "type": "dependency-of"
+                            },
+                            {
                                 "child": "f847e6a173fcafa2",
                                 "metadata": {
                                     "kind": "primary"
                                 },
                                 "parent": "2f5344cd8228dd4b",
+                                "type": "evident-by"
+                            },
+                            {
+                                "child": "4490038dd0eaaf1f",
+                                "metadata": {
+                                    "kind": "primary"
+                                },
+                                "parent": "6e9fa295947d5a74",
                                 "type": "evident-by"
                             },
                             {
@@ -1408,20 +1478,17 @@
                                 "type": "evident-by"
                             },
                             {
-                                "child": "88989219445b7af0",
+                                "child": "4490038dd0eaaf1f",
                                 "metadata": {
                                     "kind": "primary"
                                 },
-                                "parent": "a2ebb7eddb55c889",
+                                "parent": "abcd66721531b705",
                                 "type": "evident-by"
                             },
                             {
-                                "child": "26ca2b7dc025d550",
-                                "metadata": {
-                                    "kind": "primary"
-                                },
-                                "parent": "a6d92e08473e7c01",
-                                "type": "evident-by"
+                                "child": "6e9fa295947d5a74",
+                                "parent": "abcd66721531b705",
+                                "type": "dependency-of"
                             },
                             {
                                 "child": "008a64fe0c391bfd",
@@ -1439,7 +1506,22 @@
                                 "type": "contains"
                             },
                             {
+                                "child": "2bd42fead3efa513",
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "type": "contains"
+                            },
+                            {
+                                "child": "2e6e457c30134f16",
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "type": "contains"
+                            },
+                            {
                                 "child": "2f5344cd8228dd4b",
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "type": "contains"
+                            },
+                            {
+                                "child": "6e9fa295947d5a74",
                                 "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
                                 "type": "contains"
                             },
@@ -1459,12 +1541,7 @@
                                 "type": "contains"
                             },
                             {
-                                "child": "a2ebb7eddb55c889",
-                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
-                                "type": "contains"
-                            },
-                            {
-                                "child": "a6d92e08473e7c01",
+                                "child": "abcd66721531b705",
                                 "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
                                 "type": "contains"
                             },
@@ -1475,6 +1552,11 @@
                             },
                             {
                                 "child": "e79b5901821852ab",
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "type": "contains"
+                            },
+                            {
+                                "child": "fb7ce76208859230",
                                 "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
                                 "type": "contains"
                             },
@@ -1493,6 +1575,19 @@
                                 },
                                 "parent": "e79b5901821852ab",
                                 "type": "evident-by"
+                            },
+                            {
+                                "child": "4490038dd0eaaf1f",
+                                "metadata": {
+                                    "kind": "primary"
+                                },
+                                "parent": "fb7ce76208859230",
+                                "type": "evident-by"
+                            },
+                            {
+                                "child": "6e9fa295947d5a74",
+                                "parent": "fb7ce76208859230",
+                                "type": "dependency-of"
                             }
                         ],
                         "artifacts": [
@@ -1577,48 +1672,48 @@
                             {
                                 "cpes": [
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     }
                                 ],
                                 "foundBy": "github-actions-usage-cataloger",
-                                "id": "a2ebb7eddb55c889",
+                                "id": "2bd42fead3efa513",
                                 "language": "",
                                 "licenses": [],
                                 "locations": [
@@ -1631,13 +1726,13 @@
                                     }
                                 ],
                                 "metadata": {
-                                    "value": "github/codeql-action/upload-sarif@v2"
+                                    "value": "github/codeql-action/upload-sarif@v3"
                                 },
                                 "metadataType": "github-actions-use-statement",
                                 "name": "github/codeql-action/upload-sarif",
-                                "purl": "pkg:github/github/codeql-action@v2#upload-sarif",
+                                "purl": "pkg:github/github/codeql-action@v3#upload-sarif",
                                 "type": "github-action",
-                                "version": "v2"
+                                "version": "v3"
                             },
                             {
                                 "cpes": [
@@ -1772,6 +1867,112 @@
                             {
                                 "cpes": [
                                     {
+                                        "cpe": "cpe:2.3:a:python-dateutil:python-dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-dateutil:python_dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_dateutil:python-dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_dateutil:python_dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python-dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python_dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    }
+                                ],
+                                "foundBy": "python-package-cataloger",
+                                "id": "fb7ce76208859230",
+                                "language": "python",
+                                "licenses": [],
+                                "locations": [
+                                    {
+                                        "accessPath": "/poetry.lock",
+                                        "annotations": {
+                                            "evidence": "primary"
+                                        },
+                                        "path": "/poetry.lock"
+                                    }
+                                ],
+                                "metadata": {
+                                    "dependencies": [
+                                        {
+                                            "name": "six",
+                                            "optional": false,
+                                            "version": ">=1.5"
+                                        }
+                                    ],
+                                    "index": "https://pypi.org/simple"
+                                },
+                                "metadataType": "python-poetry-lock-entry",
+                                "name": "python-dateutil",
+                                "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+                                "type": "python",
+                                "version": "2.9.0.post0"
+                            },
+                            {
+                                "cpes": [
+                                    {
+                                        "cpe": "cpe:2.3:a:python-magic:python-magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-magic:python_magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_magic:python-magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_magic:python_magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python-magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python_magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    }
+                                ],
+                                "foundBy": "python-package-cataloger",
+                                "id": "abcd66721531b705",
+                                "language": "python",
+                                "licenses": [],
+                                "locations": [
+                                    {
+                                        "accessPath": "/poetry.lock",
+                                        "annotations": {
+                                            "evidence": "primary"
+                                        },
+                                        "path": "/poetry.lock"
+                                    }
+                                ],
+                                "metadata": {
+                                    "dependencies": null,
+                                    "index": "https://pypi.org/simple"
+                                },
+                                "metadataType": "python-poetry-lock-entry",
+                                "name": "python-magic",
+                                "purl": "pkg:pypi/python-magic@0.4.27",
+                                "type": "python",
+                                "version": "0.4.27"
+                            },
+                            {
+                                "cpes": [
+                                    {
                                         "cpe": "cpe:2.3:a:python-s3cmd:python-s3cmd:2.4.0:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
@@ -1821,27 +2022,112 @@
                                     }
                                 ],
                                 "foundBy": "python-package-cataloger",
-                                "id": "a6d92e08473e7c01",
+                                "id": "6e9fa295947d5a74",
                                 "language": "python",
                                 "licenses": [],
                                 "locations": [
                                     {
-                                        "accessPath": "/requirements.txt",
+                                        "accessPath": "/poetry.lock",
                                         "annotations": {
                                             "evidence": "primary"
                                         },
-                                        "path": "/requirements.txt"
+                                        "path": "/poetry.lock"
                                     }
                                 ],
                                 "metadata": {
-                                    "name": "s3cmd",
-                                    "versionConstraint": "==2.4.0"
+                                    "dependencies": [
+                                        {
+                                            "name": "python-dateutil",
+                                            "optional": false,
+                                            "version": "*"
+                                        },
+                                        {
+                                            "name": "python-magic",
+                                            "optional": false,
+                                            "version": "*"
+                                        }
+                                    ],
+                                    "index": "https://pypi.org/simple"
                                 },
-                                "metadataType": "python-pip-requirements-entry",
+                                "metadataType": "python-poetry-lock-entry",
                                 "name": "s3cmd",
                                 "purl": "pkg:pypi/s3cmd@2.4.0",
                                 "type": "python",
                                 "version": "2.4.0"
+                            },
+                            {
+                                "cpes": [
+                                    {
+                                        "cpe": "cpe:2.3:a:python-six:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-six:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_six:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_six:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-six:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_six:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:six:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:six:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:six:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    }
+                                ],
+                                "foundBy": "python-package-cataloger",
+                                "id": "2e6e457c30134f16",
+                                "language": "python",
+                                "licenses": [],
+                                "locations": [
+                                    {
+                                        "accessPath": "/poetry.lock",
+                                        "annotations": {
+                                            "evidence": "primary"
+                                        },
+                                        "path": "/poetry.lock"
+                                    }
+                                ],
+                                "metadata": {
+                                    "dependencies": null,
+                                    "index": "https://pypi.org/simple"
+                                },
+                                "metadataType": "python-poetry-lock-entry",
+                                "name": "six",
+                                "purl": "pkg:pypi/six@1.17.0",
+                                "type": "python",
+                                "version": "1.17.0"
                             },
                             {
                                 "cpes": [
@@ -2512,11 +2798,11 @@
                                 "digests": [
                                     {
                                         "algorithm": "sha1",
-                                        "value": "8f6fb7d7504b68ffe0a85f6c44d31b451acf7dd9"
+                                        "value": "7188fdae0132c4b1d8080612fbe931c708534ce7"
                                     },
                                     {
                                         "algorithm": "sha256",
-                                        "value": "8466db62f392624dbfd5de8ad3a0a0b764b7c440b8a4c164bc95bd0e313e72c6"
+                                        "value": "5dc92c6e6d30ac1b28e6e9cb526dd7e0d889cfd7cf6c0b1e21366834b103b949"
                                     }
                                 ],
                                 "id": "88989219445b7af0",
@@ -2527,7 +2813,7 @@
                                     "groupID": 118,
                                     "mimeType": "text/plain",
                                     "mode": 644,
-                                    "size": 4110,
+                                    "size": 4139,
                                     "type": "RegularFile",
                                     "userID": 1001
                                 }
@@ -2536,22 +2822,22 @@
                                 "digests": [
                                     {
                                         "algorithm": "sha1",
-                                        "value": "153f79884fb3b00b019ce05d2d21788ed1e3aa4b"
+                                        "value": "f0c762430e14c02a040156990ea4fef3bd6f285a"
                                     },
                                     {
                                         "algorithm": "sha256",
-                                        "value": "8a18c410274a88b624e1165e8ac1d05a0fd773470090c6020eaea06d0cad9b3d"
+                                        "value": "ab4b3ccf1b4d1ff10e10059a7a0e91060acb8f6214ae0c225f9ecb82f127aa1a"
                                     }
                                 ],
-                                "id": "26ca2b7dc025d550",
+                                "id": "4490038dd0eaaf1f",
                                 "location": {
-                                    "path": "/requirements.txt"
+                                    "path": "/poetry.lock"
                                 },
                                 "metadata": {
                                     "groupID": 118,
                                     "mimeType": "text/plain",
                                     "mode": 644,
-                                    "size": 13,
+                                    "size": 2219,
                                     "type": "RegularFile",
                                     "userID": 1001
                                 }
@@ -2615,8 +2901,8 @@
                         "bomFormat": "CycloneDX",
                         "components": [
                             {
-                                "bom-ref": "674a28e6-ebff-4822-80f1-925bf0e8ed09",
-                                "name": "requirements.txt",
+                                "bom-ref": "e1e0e367-5ef9-4400-b22c-7bab7783dc92",
+                                "name": "poetry.lock",
                                 "properties": [
                                     {
                                         "name": "aquasecurity:trivy:Class",
@@ -2624,23 +2910,78 @@
                                     },
                                     {
                                         "name": "aquasecurity:trivy:Type",
-                                        "value": "pip"
+                                        "value": "poetry"
                                     }
                                 ],
                                 "type": "application"
+                            },
+                            {
+                                "bom-ref": "pkg:pypi/python-dateutil@2.9.0.post0",
+                                "name": "python-dateutil",
+                                "properties": [
+                                    {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "python-dateutil@2.9.0.post0"
+                                    },
+                                    {
+                                        "name": "aquasecurity:trivy:PkgType",
+                                        "value": "poetry"
+                                    }
+                                ],
+                                "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+                                "type": "library",
+                                "version": "2.9.0.post0"
+                            },
+                            {
+                                "bom-ref": "pkg:pypi/python-magic@0.4.27",
+                                "name": "python-magic",
+                                "properties": [
+                                    {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "python-magic@0.4.27"
+                                    },
+                                    {
+                                        "name": "aquasecurity:trivy:PkgType",
+                                        "value": "poetry"
+                                    }
+                                ],
+                                "purl": "pkg:pypi/python-magic@0.4.27",
+                                "type": "library",
+                                "version": "0.4.27"
                             },
                             {
                                 "bom-ref": "pkg:pypi/s3cmd@2.4.0",
                                 "name": "s3cmd",
                                 "properties": [
                                     {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "s3cmd@2.4.0"
+                                    },
+                                    {
                                         "name": "aquasecurity:trivy:PkgType",
-                                        "value": "pip"
+                                        "value": "poetry"
                                     }
                                 ],
                                 "purl": "pkg:pypi/s3cmd@2.4.0",
                                 "type": "library",
                                 "version": "2.4.0"
+                            },
+                            {
+                                "bom-ref": "pkg:pypi/six@1.17.0",
+                                "name": "six",
+                                "properties": [
+                                    {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "six@1.17.0"
+                                    },
+                                    {
+                                        "name": "aquasecurity:trivy:PkgType",
+                                        "value": "poetry"
+                                    }
+                                ],
+                                "purl": "pkg:pypi/six@1.17.0",
+                                "type": "library",
+                                "version": "1.17.0"
                             }
                         ],
                         "dependencies": [
@@ -2648,22 +2989,39 @@
                                 "dependsOn": [
                                     "pkg:pypi/s3cmd@2.4.0"
                                 ],
-                                "ref": "674a28e6-ebff-4822-80f1-925bf0e8ed09"
+                                "ref": "e1e0e367-5ef9-4400-b22c-7bab7783dc92"
                             },
                             {
                                 "dependsOn": [
-                                    "674a28e6-ebff-4822-80f1-925bf0e8ed09"
+                                    "e1e0e367-5ef9-4400-b22c-7bab7783dc92"
                                 ],
-                                "ref": "8b563ee3-3095-4cfd-a630-f6cef5c69315"
+                                "ref": "eb92ddc2-7303-417f-896c-cfa62474bafc"
+                            },
+                            {
+                                "dependsOn": [
+                                    "pkg:pypi/six@1.17.0"
+                                ],
+                                "ref": "pkg:pypi/python-dateutil@2.9.0.post0"
                             },
                             {
                                 "dependsOn": [],
+                                "ref": "pkg:pypi/python-magic@0.4.27"
+                            },
+                            {
+                                "dependsOn": [
+                                    "pkg:pypi/python-dateutil@2.9.0.post0",
+                                    "pkg:pypi/python-magic@0.4.27"
+                                ],
                                 "ref": "pkg:pypi/s3cmd@2.4.0"
+                            },
+                            {
+                                "dependsOn": [],
+                                "ref": "pkg:pypi/six@1.17.0"
                             }
                         ],
                         "metadata": {
                             "component": {
-                                "bom-ref": "8b563ee3-3095-4cfd-a630-f6cef5c69315",
+                                "bom-ref": "eb92ddc2-7303-417f-896c-cfa62474bafc",
                                 "name": ".",
                                 "properties": [
                                     {
@@ -2673,7 +3031,7 @@
                                 ],
                                 "type": "application"
                             },
-                            "timestamp": "2025-07-27T16:19:37+00:00",
+                            "timestamp": "2025-08-03T21:21:30+00:00",
                             "tools": {
                                 "components": [
                                     {
@@ -2685,7 +3043,7 @@
                                 ]
                             }
                         },
-                        "serialNumber": "urn:uuid:af7603db-23a6-4492-a881-2824791851f4",
+                        "serialNumber": "urn:uuid:697ee851-950a-4725-8618-782430be6f04",
                         "specVersion": "1.6",
                         "version": 1,
                         "vulnerabilities": []

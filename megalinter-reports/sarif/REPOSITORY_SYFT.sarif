@@ -97,9 +97,9 @@
                                 }
                             },
                             {
-                                "id": "a2ebb7eddb55c889",
+                                "id": "2bd42fead3efa513",
                                 "name": "github/codeql-action/upload-sarif",
-                                "version": "v2",
+                                "version": "v3",
                                 "type": "github-action",
                                 "foundBy": "github-actions-usage-cataloger",
                                 "locations": [
@@ -115,50 +115,50 @@
                                 "language": "",
                                 "cpes": [
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload-sarif:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload_sarif:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql-action\\/upload:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql_action\\/upload:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql-action\\/upload-sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     },
                                     {
-                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:v2:*:*:*:*:*:*:*",
+                                        "cpe": "cpe:2.3:a:github\\/codeql:github\\/codeql_action\\/upload_sarif:v3:*:*:*:*:*:*:*",
                                         "source": "syft-generated"
                                     }
                                 ],
-                                "purl": "pkg:github/github/codeql-action@v2#upload-sarif",
+                                "purl": "pkg:github/github/codeql-action@v3#upload-sarif",
                                 "metadataType": "github-actions-use-statement",
                                 "metadata": {
-                                    "value": "github/codeql-action/upload-sarif@v2"
+                                    "value": "github/codeql-action/upload-sarif@v3"
                                 }
                             },
                             {
@@ -292,15 +292,121 @@
                                 }
                             },
                             {
-                                "id": "a6d92e08473e7c01",
+                                "id": "fb7ce76208859230",
+                                "name": "python-dateutil",
+                                "version": "2.9.0.post0",
+                                "type": "python",
+                                "foundBy": "python-package-cataloger",
+                                "locations": [
+                                    {
+                                        "path": "/poetry.lock",
+                                        "accessPath": "/poetry.lock",
+                                        "annotations": {
+                                            "evidence": "primary"
+                                        }
+                                    }
+                                ],
+                                "licenses": [],
+                                "language": "python",
+                                "cpes": [
+                                    {
+                                        "cpe": "cpe:2.3:a:python-dateutil:python-dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-dateutil:python_dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_dateutil:python-dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_dateutil:python_dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python-dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python_dateutil:2.9.0.post0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    }
+                                ],
+                                "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+                                "metadataType": "python-poetry-lock-entry",
+                                "metadata": {
+                                    "index": "https://pypi.org/simple",
+                                    "dependencies": [
+                                        {
+                                            "name": "six",
+                                            "version": ">=1.5",
+                                            "optional": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "abcd66721531b705",
+                                "name": "python-magic",
+                                "version": "0.4.27",
+                                "type": "python",
+                                "foundBy": "python-package-cataloger",
+                                "locations": [
+                                    {
+                                        "path": "/poetry.lock",
+                                        "accessPath": "/poetry.lock",
+                                        "annotations": {
+                                            "evidence": "primary"
+                                        }
+                                    }
+                                ],
+                                "licenses": [],
+                                "language": "python",
+                                "cpes": [
+                                    {
+                                        "cpe": "cpe:2.3:a:python-magic:python-magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-magic:python_magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_magic:python-magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_magic:python_magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python-magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python_magic:0.4.27:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    }
+                                ],
+                                "purl": "pkg:pypi/python-magic@0.4.27",
+                                "metadataType": "python-poetry-lock-entry",
+                                "metadata": {
+                                    "index": "https://pypi.org/simple",
+                                    "dependencies": null
+                                }
+                            },
+                            {
+                                "id": "6e9fa295947d5a74",
                                 "name": "s3cmd",
                                 "version": "2.4.0",
                                 "type": "python",
                                 "foundBy": "python-package-cataloger",
                                 "locations": [
                                     {
-                                        "path": "/requirements.txt",
-                                        "accessPath": "/requirements.txt",
+                                        "path": "/poetry.lock",
+                                        "accessPath": "/poetry.lock",
                                         "annotations": {
                                             "evidence": "primary"
                                         }
@@ -359,10 +465,95 @@
                                     }
                                 ],
                                 "purl": "pkg:pypi/s3cmd@2.4.0",
-                                "metadataType": "python-pip-requirements-entry",
+                                "metadataType": "python-poetry-lock-entry",
                                 "metadata": {
-                                    "name": "s3cmd",
-                                    "versionConstraint": "==2.4.0"
+                                    "index": "https://pypi.org/simple",
+                                    "dependencies": [
+                                        {
+                                            "name": "python-dateutil",
+                                            "version": "*",
+                                            "optional": false
+                                        },
+                                        {
+                                            "name": "python-magic",
+                                            "version": "*",
+                                            "optional": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "2e6e457c30134f16",
+                                "name": "six",
+                                "version": "1.17.0",
+                                "type": "python",
+                                "foundBy": "python-package-cataloger",
+                                "locations": [
+                                    {
+                                        "path": "/poetry.lock",
+                                        "accessPath": "/poetry.lock",
+                                        "annotations": {
+                                            "evidence": "primary"
+                                        }
+                                    }
+                                ],
+                                "licenses": [],
+                                "language": "python",
+                                "cpes": [
+                                    {
+                                        "cpe": "cpe:2.3:a:python-six:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-six:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_six:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_six:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python-six:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python_six:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:six:python-six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:six:python_six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:python:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    },
+                                    {
+                                        "cpe": "cpe:2.3:a:six:six:1.17.0:*:*:*:*:*:*:*",
+                                        "source": "syft-generated"
+                                    }
+                                ],
+                                "purl": "pkg:pypi/six@1.17.0",
+                                "metadataType": "python-poetry-lock-entry",
+                                "metadata": {
+                                    "index": "https://pypi.org/simple",
+                                    "dependencies": null
                                 }
                             },
                             {
@@ -781,8 +972,37 @@
                                 }
                             },
                             {
+                                "parent": "2bd42fead3efa513",
+                                "child": "88989219445b7af0",
+                                "type": "evident-by",
+                                "metadata": {
+                                    "kind": "primary"
+                                }
+                            },
+                            {
+                                "parent": "2e6e457c30134f16",
+                                "child": "4490038dd0eaaf1f",
+                                "type": "evident-by",
+                                "metadata": {
+                                    "kind": "primary"
+                                }
+                            },
+                            {
+                                "parent": "2e6e457c30134f16",
+                                "child": "fb7ce76208859230",
+                                "type": "dependency-of"
+                            },
+                            {
                                 "parent": "2f5344cd8228dd4b",
                                 "child": "f847e6a173fcafa2",
+                                "type": "evident-by",
+                                "metadata": {
+                                    "kind": "primary"
+                                }
+                            },
+                            {
+                                "parent": "6e9fa295947d5a74",
+                                "child": "4490038dd0eaaf1f",
                                 "type": "evident-by",
                                 "metadata": {
                                     "kind": "primary"
@@ -813,20 +1033,17 @@
                                 }
                             },
                             {
-                                "parent": "a2ebb7eddb55c889",
-                                "child": "88989219445b7af0",
+                                "parent": "abcd66721531b705",
+                                "child": "4490038dd0eaaf1f",
                                 "type": "evident-by",
                                 "metadata": {
                                     "kind": "primary"
                                 }
                             },
                             {
-                                "parent": "a6d92e08473e7c01",
-                                "child": "26ca2b7dc025d550",
-                                "type": "evident-by",
-                                "metadata": {
-                                    "kind": "primary"
-                                }
+                                "parent": "abcd66721531b705",
+                                "child": "6e9fa295947d5a74",
+                                "type": "dependency-of"
                             },
                             {
                                 "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
@@ -845,7 +1062,22 @@
                             },
                             {
                                 "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "child": "2bd42fead3efa513",
+                                "type": "contains"
+                            },
+                            {
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "child": "2e6e457c30134f16",
+                                "type": "contains"
+                            },
+                            {
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
                                 "child": "2f5344cd8228dd4b",
+                                "type": "contains"
+                            },
+                            {
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "child": "6e9fa295947d5a74",
                                 "type": "contains"
                             },
                             {
@@ -865,12 +1097,7 @@
                             },
                             {
                                 "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
-                                "child": "a2ebb7eddb55c889",
-                                "type": "contains"
-                            },
-                            {
-                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
-                                "child": "a6d92e08473e7c01",
+                                "child": "abcd66721531b705",
                                 "type": "contains"
                             },
                             {
@@ -881,6 +1108,11 @@
                             {
                                 "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
                                 "child": "e79b5901821852ab",
+                                "type": "contains"
+                            },
+                            {
+                                "parent": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+                                "child": "fb7ce76208859230",
                                 "type": "contains"
                             },
                             {
@@ -898,6 +1130,19 @@
                                 "metadata": {
                                     "kind": "primary"
                                 }
+                            },
+                            {
+                                "parent": "fb7ce76208859230",
+                                "child": "4490038dd0eaaf1f",
+                                "type": "evident-by",
+                                "metadata": {
+                                    "kind": "primary"
+                                }
+                            },
+                            {
+                                "parent": "fb7ce76208859230",
+                                "child": "6e9fa295947d5a74",
+                                "type": "dependency-of"
                             }
                         ],
                         "files": [
@@ -984,23 +1229,23 @@
                                     "userID": 1001,
                                     "groupID": 118,
                                     "mimeType": "text/plain",
-                                    "size": 4110
+                                    "size": 4139
                                 },
                                 "digests": [
                                     {
                                         "algorithm": "sha1",
-                                        "value": "8f6fb7d7504b68ffe0a85f6c44d31b451acf7dd9"
+                                        "value": "7188fdae0132c4b1d8080612fbe931c708534ce7"
                                     },
                                     {
                                         "algorithm": "sha256",
-                                        "value": "8466db62f392624dbfd5de8ad3a0a0b764b7c440b8a4c164bc95bd0e313e72c6"
+                                        "value": "5dc92c6e6d30ac1b28e6e9cb526dd7e0d889cfd7cf6c0b1e21366834b103b949"
                                     }
                                 ]
                             },
                             {
-                                "id": "26ca2b7dc025d550",
+                                "id": "4490038dd0eaaf1f",
                                 "location": {
-                                    "path": "/requirements.txt"
+                                    "path": "/poetry.lock"
                                 },
                                 "metadata": {
                                     "mode": 644,
@@ -1008,16 +1253,16 @@
                                     "userID": 1001,
                                     "groupID": 118,
                                     "mimeType": "text/plain",
-                                    "size": 13
+                                    "size": 2219
                                 },
                                 "digests": [
                                     {
                                         "algorithm": "sha1",
-                                        "value": "153f79884fb3b00b019ce05d2d21788ed1e3aa4b"
+                                        "value": "f0c762430e14c02a040156990ea4fef3bd6f285a"
                                     },
                                     {
                                         "algorithm": "sha256",
-                                        "value": "8a18c410274a88b624e1165e8ac1d05a0fd773470090c6020eaea06d0cad9b3d"
+                                        "value": "ab4b3ccf1b4d1ff10e10059a7a0e91060acb8f6214ae0c225f9ecb82f127aa1a"
                                     }
                                 ]
                             }

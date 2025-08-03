@@ -20,10 +20,10 @@
                         "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
                         "bomFormat": "CycloneDX",
                         "specVersion": "1.6",
-                        "serialNumber": "urn:uuid:af7603db-23a6-4492-a881-2824791851f4",
+                        "serialNumber": "urn:uuid:697ee851-950a-4725-8618-782430be6f04",
                         "version": 1,
                         "metadata": {
-                            "timestamp": "2025-07-27T16:19:37+00:00",
+                            "timestamp": "2025-08-03T21:21:30+00:00",
                             "tools": {
                                 "components": [
                                     {
@@ -35,7 +35,7 @@
                                 ]
                             },
                             "component": {
-                                "bom-ref": "8b563ee3-3095-4cfd-a630-f6cef5c69315",
+                                "bom-ref": "eb92ddc2-7303-417f-896c-cfa62474bafc",
                                 "type": "application",
                                 "name": ".",
                                 "properties": [
@@ -48,9 +48,9 @@
                         },
                         "components": [
                             {
-                                "bom-ref": "674a28e6-ebff-4822-80f1-925bf0e8ed09",
+                                "bom-ref": "e1e0e367-5ef9-4400-b22c-7bab7783dc92",
                                 "type": "application",
-                                "name": "requirements.txt",
+                                "name": "poetry.lock",
                                 "properties": [
                                     {
                                         "name": "aquasecurity:trivy:Class",
@@ -58,7 +58,41 @@
                                     },
                                     {
                                         "name": "aquasecurity:trivy:Type",
-                                        "value": "pip"
+                                        "value": "poetry"
+                                    }
+                                ]
+                            },
+                            {
+                                "bom-ref": "pkg:pypi/python-dateutil@2.9.0.post0",
+                                "type": "library",
+                                "name": "python-dateutil",
+                                "version": "2.9.0.post0",
+                                "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+                                "properties": [
+                                    {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "python-dateutil@2.9.0.post0"
+                                    },
+                                    {
+                                        "name": "aquasecurity:trivy:PkgType",
+                                        "value": "poetry"
+                                    }
+                                ]
+                            },
+                            {
+                                "bom-ref": "pkg:pypi/python-magic@0.4.27",
+                                "type": "library",
+                                "name": "python-magic",
+                                "version": "0.4.27",
+                                "purl": "pkg:pypi/python-magic@0.4.27",
+                                "properties": [
+                                    {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "python-magic@0.4.27"
+                                    },
+                                    {
+                                        "name": "aquasecurity:trivy:PkgType",
+                                        "value": "poetry"
                                     }
                                 ]
                             },
@@ -70,27 +104,65 @@
                                 "purl": "pkg:pypi/s3cmd@2.4.0",
                                 "properties": [
                                     {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "s3cmd@2.4.0"
+                                    },
+                                    {
                                         "name": "aquasecurity:trivy:PkgType",
-                                        "value": "pip"
+                                        "value": "poetry"
+                                    }
+                                ]
+                            },
+                            {
+                                "bom-ref": "pkg:pypi/six@1.17.0",
+                                "type": "library",
+                                "name": "six",
+                                "version": "1.17.0",
+                                "purl": "pkg:pypi/six@1.17.0",
+                                "properties": [
+                                    {
+                                        "name": "aquasecurity:trivy:PkgID",
+                                        "value": "six@1.17.0"
+                                    },
+                                    {
+                                        "name": "aquasecurity:trivy:PkgType",
+                                        "value": "poetry"
                                     }
                                 ]
                             }
                         ],
                         "dependencies": [
                             {
-                                "ref": "674a28e6-ebff-4822-80f1-925bf0e8ed09",
+                                "ref": "e1e0e367-5ef9-4400-b22c-7bab7783dc92",
                                 "dependsOn": [
                                     "pkg:pypi/s3cmd@2.4.0"
                                 ]
                             },
                             {
-                                "ref": "8b563ee3-3095-4cfd-a630-f6cef5c69315",
+                                "ref": "eb92ddc2-7303-417f-896c-cfa62474bafc",
                                 "dependsOn": [
-                                    "674a28e6-ebff-4822-80f1-925bf0e8ed09"
+                                    "e1e0e367-5ef9-4400-b22c-7bab7783dc92"
                                 ]
                             },
                             {
+                                "ref": "pkg:pypi/python-dateutil@2.9.0.post0",
+                                "dependsOn": [
+                                    "pkg:pypi/six@1.17.0"
+                                ]
+                            },
+                            {
+                                "ref": "pkg:pypi/python-magic@0.4.27",
+                                "dependsOn": []
+                            },
+                            {
                                 "ref": "pkg:pypi/s3cmd@2.4.0",
+                                "dependsOn": [
+                                    "pkg:pypi/python-dateutil@2.9.0.post0",
+                                    "pkg:pypi/python-magic@0.4.27"
+                                ]
+                            },
+                            {
+                                "ref": "pkg:pypi/six@1.17.0",
                                 "dependsOn": []
                             }
                         ],
