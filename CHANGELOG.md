@@ -1,5 +1,18 @@
 # Changelog
 
+## [5.4.0](https://github.com/tkhom3/docker-s3backup/compare/v5.3.0...v5.4.0) (2025-08-04)
+
+
+### Features
+
+* move to poetry ([ee5b198](https://github.com/tkhom3/docker-s3backup/commit/ee5b198851fbf971680efa578c89e34d4f8904f5))
+* pin to slim-bookworm ([1cf03cd](https://github.com/tkhom3/docker-s3backup/commit/1cf03cd4043d6a57109c5ab0d31e18b4bc1a60ba))
+
+
+### Bug Fixes
+
+* linting errors ([bdca294](https://github.com/tkhom3/docker-s3backup/commit/bdca2941cd0b1d8fd2cee6b8aaca3fbb75fd81a1))
+
 ## [5.3.0](https://github.com/tkhom3/docker-s3backup/compare/v5.2.0...v5.3.0) (2025-07-22)
 
 
