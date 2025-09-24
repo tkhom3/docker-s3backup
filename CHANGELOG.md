@@ -1,5 +1,27 @@
 # Changelog
 
+## [5.5.0](https://github.com/tkhom3/docker-s3backup/compare/v5.4.0...v5.5.0) (2025-09-24)
+
+
+### Features
+
+* add python-magic ([f49807a](https://github.com/tkhom3/docker-s3backup/commit/f49807ab05d6ef6c24af3ca6565084ed5f541ec6))
+* add python-magic ([ec5f1cd](https://github.com/tkhom3/docker-s3backup/commit/ec5f1cd394c74141254199563a19512ba9b1b57c))
+
+
+### Bug Fixes
+
+* bump actions/checkout from 4 to 5 ([9ff204e](https://github.com/tkhom3/docker-s3backup/commit/9ff204e156eaaa48e073d4bd00b42d2357952727))
+* bump actions/checkout from 4 to 5 ([35adf1d](https://github.com/tkhom3/docker-s3backup/commit/35adf1d485263814cbbd11ec2ac72864fee0b451))
+* bump oxsecurity/megalinter from 8.8.0 to 9.0.1 ([10d24ef](https://github.com/tkhom3/docker-s3backup/commit/10d24efc8843109a1669229e57a6b24ab978587e))
+* bump oxsecurity/megalinter from 8.8.0 to 9.0.1 ([5ea25fd](https://github.com/tkhom3/docker-s3backup/commit/5ea25fd3546b4ac87b394eb070ba05e42418bbd9))
+* bump python from 3.13.5-alpine3.21 to 3.13.6-alpine3.21 ([66d11ce](https://github.com/tkhom3/docker-s3backup/commit/66d11ce63a89de1281f19696834b7883cacda5d6))
+* bump python from 3.13.5-alpine3.21 to 3.13.6-alpine3.21 ([671acfa](https://github.com/tkhom3/docker-s3backup/commit/671acfa72fb276c7312a4ded379e196a2090ad7f))
+* bump python from 3.13.6-alpine3.21 to 3.13.7-alpine3.21 ([538b9bd](https://github.com/tkhom3/docker-s3backup/commit/538b9bd85b00f7c955c442740022a7591fc3c806))
+* bump python from 3.13.6-alpine3.21 to 3.13.7-alpine3.21 ([f61a83e](https://github.com/tkhom3/docker-s3backup/commit/f61a83e475c7496b32056847bf86e69ccef75b0e))
+* Update build-and-deploy.yml ([ef32571](https://github.com/tkhom3/docker-s3backup/commit/ef32571ab9a5f6e21cb9b00426cc38b6ea8fa048))
+* Update build-and-deploy.yml ([b548b4d](https://github.com/tkhom3/docker-s3backup/commit/b548b4ded6eb3bd2ca04804e6653c33df49fdff9))
+
 ## [5.4.0](https://github.com/tkhom3/docker-s3backup/compare/v5.3.0...v5.4.0) (2025-08-04)
 
 
