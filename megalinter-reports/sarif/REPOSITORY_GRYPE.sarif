@@ -4,16 +4,16 @@
     {
       "properties": {
         "megalinter": {
-          "docUrl": "https://megalinter.io/8.8.0/descriptors/repository_grype",
+          "docUrl": "https://megalinter.io/9.0.1/descriptors/repository_grype",
           "linterKey": "REPOSITORY_GRYPE",
-          "linterVersion": "0.94.0"
+          "linterVersion": "0.100.0"
         }
       },
       "results": [],
       "tool": {
         "driver": {
           "informationUri": "https://github.com/anchore/grype",
-          "name": "grype (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE)",
+          "name": "grype (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE)",
           "version": "0.94.0"
         }
       }
