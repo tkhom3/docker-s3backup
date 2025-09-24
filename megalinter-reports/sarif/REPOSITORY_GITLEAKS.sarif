@@ -4,9 +4,9 @@
     {
       "properties": {
         "megalinter": {
-          "docUrl": "https://megalinter.io/8.8.0/descriptors/repository_gitleaks",
+          "docUrl": "https://megalinter.io/9.0.1/descriptors/repository_gitleaks",
           "linterKey": "REPOSITORY_GITLEAKS",
-          "linterVersion": "8.27.2"
+          "linterVersion": "8.28.0"
         }
       },
       "results": [],
@@ -73,6 +73,30 @@
               "id": "alibaba-secret-key",
               "shortDescription": {
                 "text": "Discovered a potential Alibaba Cloud Secret Key, potentially allowing unauthorized operations and data access within Alibaba Cloud."
+              }
+            },
+            {
+              "id": "anthropic-admin-api-key",
+              "shortDescription": {
+                "text": "Detected an Anthropic Admin API Key, risking unauthorized access to administrative functions and sensitive AI model configurations."
+              }
+            },
+            {
+              "id": "anthropic-api-key",
+              "shortDescription": {
+                "text": "Identified an Anthropic API Key, which may compromise AI assistant integrations and expose sensitive data to unauthorized access."
+              }
+            },
+            {
+              "id": "artifactory-api-key",
+              "shortDescription": {
+                "text": "Detected an Artifactory api key, posing a risk unauthorized access to the central repository."
+              }
+            },
+            {
+              "id": "artifactory-reference-token",
+              "shortDescription": {
+                "text": "Detected an Artifactory reference token, posing a risk of impersonation and unauthorized access to the central repository."
               }
             },
             {
@@ -1295,7 +1319,7 @@
             }
           ],
           "semanticVersion": "v8.0.0",
-          "version": "8.27.2"
+          "version": "8.28.0"
         }
       }
     }

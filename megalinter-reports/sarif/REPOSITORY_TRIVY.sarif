@@ -10,9 +10,9 @@
       },
       "properties": {
         "megalinter": {
-          "docUrl": "https://megalinter.io/8.8.0/descriptors/repository_trivy",
+          "docUrl": "https://megalinter.io/9.0.1/descriptors/repository_trivy",
           "linterKey": "REPOSITORY_TRIVY",
-          "linterVersion": "0.63.0"
+          "linterVersion": "0.66.0"
         }
       },
       "results": [],
@@ -22,7 +22,7 @@
           "informationUri": "https://github.com/aquasecurity/trivy",
           "name": "Trivy (MegaLinter REPOSITORY_TRIVY)",
           "rules": [],
-          "version": "0.63.0"
+          "version": "0.66.0"
         }
       }
     }
