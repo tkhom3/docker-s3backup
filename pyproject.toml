@@ -6,9 +6,10 @@ authors = [
     {name = "tkhom3"}
 ]
 readme = "README.md"
-requires-python = "^3.12"
+requires-python = "^3.13"
 dependencies = [
-    "s3cmd (>=2.4.0,<3.0.0)"
+    "s3cmd == 2.4.0",
+    "python-magic == 0.4.27"
 ]
 
 [tool.poetry]
