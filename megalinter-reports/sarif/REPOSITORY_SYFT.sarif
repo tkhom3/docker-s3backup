@@ -1157,16 +1157,16 @@
                                     "userID": 1001,
                                     "groupID": 1001,
                                     "mimeType": "text/plain",
-                                    "size": 194
+                                    "size": 241
                                 },
                                 "digests": [
                                     {
                                         "algorithm": "sha1",
-                                        "value": "e99bf17f9c0cc898d1ae265adceec98185064b83"
+                                        "value": "8e931a17e2c9d773c442c98e87ddedfeb2f47886"
                                     },
                                     {
                                         "algorithm": "sha256",
-                                        "value": "6bdaf298f58e56f12f87a2081d10265488f7bf380515d85febce54442ec2befc"
+                                        "value": "5906f4b19033d0f7d86ca5177e56866a5e75cd533b974db534f49a566778a533"
                                     }
                                 ]
                             },

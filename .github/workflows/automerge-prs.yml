@@ -6,7 +6,8 @@ on:
 permissions:
   contents: write
   pull-requests: write
-    
+
 jobs:
   build-image:
     uses: tkhom3/gha-workflows/.github/workflows/automerge-prs.yml@main
+    secrets: inherit
