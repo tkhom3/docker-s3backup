@@ -48,15 +48,19 @@ jobs:
 
           GITHUB_TOKEN: ${{ secrets.GHA_PAT }}
 
-      - name: Archive production artifacts
-        if: success() || failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: MegaLinter reports
-          include-hidden-files: "true"
-          path: |
-            megalinter-reports
-            mega-linter.log
+          # Performance optimizations
+          PARALLEL: true # Run linters in parallel
+          FILEIO_REPORTER: false # Disable file.io reporter if not needed
+
+      # - name: Archive production artifacts
+      #   if: success() || failure()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: MegaLinter reports
+      #     include-hidden-files: "true"
+      #     path: |
+      #       megalinter-reports
+      #       mega-linter.log
 
       - name: Set APPLY_FIXES_IF var
         run: |
@@ -123,8 +127,8 @@ jobs:
           commit_user_name: megalinter-bot
           commit_user_email: 129584137+megalinter-bot@users.noreply.github.com
 
-      - name: Upload MegaLinter scan results to GitHub Security tab
-        if: success() || failure()
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: "megalinter-reports/megalinter-report.sarif"
+      # - name: Upload MegaLinter scan results to GitHub Security tab
+      #   if: success() || failure()
+      #   uses: github/codeql-action/upload-sarif@v3
+      #   with:
+      #     sarif_file: "megalinter-reports/megalinter-report.sarif"
