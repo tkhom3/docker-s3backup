@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.5.1](https://github.com/tkhom3/docker-s3backup/compare/v5.5.0...v5.5.1) (2025-09-30)
+
+
+### Bug Fixes
+
+* move build and deploy step locally ([9f4ea1b](https://github.com/tkhom3/docker-s3backup/commit/9f4ea1b4e7934f9fb03d53d30c83cfc49e50c793))
+* move build and deploy step locally ([e8c63f1](https://github.com/tkhom3/docker-s3backup/commit/e8c63f16e12803fd4167d96d604c66962465442e))
+
 ## [5.5.0](https://github.com/tkhom3/docker-s3backup/compare/v5.4.0...v5.5.0) (2025-09-24)
 
 
