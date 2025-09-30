@@ -60,8 +60,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GHA_PAT }}
 
           # Performance optimizations
-          PARALLEL: true  # Run linters in parallel
-          FILEIO_REPORTER: false  # Disable file.io reporter if not needed
+          PARALLEL: true # Run linters in parallel
+          FILEIO_REPORTER: false # Disable file.io reporter if not needed
 
       # - name: Archive production artifacts
       #   if: success() || failure()
