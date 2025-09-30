@@ -1346,7 +1346,7 @@
             "tool": {
                 "driver": {
                     "informationUri": "https://github.com/anchore/grype",
-                    "name": "grype (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE)",
+                    "name": "grype (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE) (MegaLinter REPOSITORY_GRYPE)",
                     "version": "0.94.0"
                 }
             }
@@ -1364,7 +1364,7 @@
             "tool": {
                 "driver": {
                     "informationUri": "https://github.com/secretlint/secretlint",
-                    "name": "secretlint (MegaLinter REPOSITORY_SECRETLINT) (MegaLinter REPOSITORY_SECRETLINT) (MegaLinter REPOSITORY_SECRETLINT)",
+                    "name": "secretlint (MegaLinter REPOSITORY_SECRETLINT) (MegaLinter REPOSITORY_SECRETLINT) (MegaLinter REPOSITORY_SECRETLINT) (MegaLinter REPOSITORY_SECRETLINT)",
                     "rules": [],
                     "version": "1.0.0"
                 }
@@ -2709,11 +2709,11 @@
                                 "digests": [
                                     {
                                         "algorithm": "sha1",
-                                        "value": "e99bf17f9c0cc898d1ae265adceec98185064b83"
+                                        "value": "8e931a17e2c9d773c442c98e87ddedfeb2f47886"
                                     },
                                     {
                                         "algorithm": "sha256",
-                                        "value": "6bdaf298f58e56f12f87a2081d10265488f7bf380515d85febce54442ec2befc"
+                                        "value": "5906f4b19033d0f7d86ca5177e56866a5e75cd533b974db534f49a566778a533"
                                     }
                                 ],
                                 "id": "17a8a81e16b65d03",
@@ -2724,7 +2724,7 @@
                                     "groupID": 1001,
                                     "mimeType": "text/plain",
                                     "mode": 644,
-                                    "size": 194,
+                                    "size": 241,
                                     "type": "RegularFile",
                                     "userID": 1001
                                 }
@@ -2884,7 +2884,7 @@
                         "bomFormat": "CycloneDX",
                         "components": [
                             {
-                                "bom-ref": "8da45741-2179-4b7d-9287-7fb46ad6eeac",
+                                "bom-ref": "75202cce-e428-4918-a099-86cfedd53d49",
                                 "name": "poetry.lock",
                                 "properties": [
                                     {
@@ -2973,13 +2973,13 @@
                                     "pkg:pypi/python-magic@0.4.27",
                                     "pkg:pypi/s3cmd@2.4.0"
                                 ],
-                                "ref": "8da45741-2179-4b7d-9287-7fb46ad6eeac"
+                                "ref": "75202cce-e428-4918-a099-86cfedd53d49"
                             },
                             {
                                 "dependsOn": [
-                                    "8da45741-2179-4b7d-9287-7fb46ad6eeac"
+                                    "75202cce-e428-4918-a099-86cfedd53d49"
                                 ],
-                                "ref": "eb018e1a-e5d6-4d5f-ace3-7857b6d1f828"
+                                "ref": "ab3a70bd-5023-4aca-999d-98d142058c26"
                             },
                             {
                                 "dependsOn": [
@@ -3005,7 +3005,7 @@
                         ],
                         "metadata": {
                             "component": {
-                                "bom-ref": "eb018e1a-e5d6-4d5f-ace3-7857b6d1f828",
+                                "bom-ref": "ab3a70bd-5023-4aca-999d-98d142058c26",
                                 "name": ".",
                                 "properties": [
                                     {
@@ -3015,7 +3015,7 @@
                                 ],
                                 "type": "application"
                             },
-                            "timestamp": "2025-09-24T01:39:42+00:00",
+                            "timestamp": "2025-09-30T22:37:55+00:00",
                             "tools": {
                                 "components": [
                                     {
@@ -3030,7 +3030,7 @@
                                 ]
                             }
                         },
-                        "serialNumber": "urn:uuid:a589d0c3-73f3-42a3-8e35-498e61a3e254",
+                        "serialNumber": "urn:uuid:3b9d525d-5abe-4675-ac44-2a8b1fc8d11b",
                         "specVersion": "1.6",
                         "version": 1,
                         "vulnerabilities": []

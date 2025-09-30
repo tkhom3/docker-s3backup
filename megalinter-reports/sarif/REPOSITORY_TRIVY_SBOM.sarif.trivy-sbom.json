@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:a589d0c3-73f3-42a3-8e35-498e61a3e254",
+  "serialNumber": "urn:uuid:3b9d525d-5abe-4675-ac44-2a8b1fc8d11b",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-09-24T01:39:42+00:00",
+    "timestamp": "2025-09-30T22:37:55+00:00",
     "tools": {
       "components": [
         {
@@ -20,7 +20,7 @@
       ]
     },
     "component": {
-      "bom-ref": "eb018e1a-e5d6-4d5f-ace3-7857b6d1f828",
+      "bom-ref": "ab3a70bd-5023-4aca-999d-98d142058c26",
       "type": "application",
       "name": ".",
       "properties": [
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "8da45741-2179-4b7d-9287-7fb46ad6eeac",
+      "bom-ref": "75202cce-e428-4918-a099-86cfedd53d49",
       "type": "application",
       "name": "poetry.lock",
       "properties": [
@@ -118,16 +118,16 @@
   ],
   "dependencies": [
     {
-      "ref": "8da45741-2179-4b7d-9287-7fb46ad6eeac",
+      "ref": "75202cce-e428-4918-a099-86cfedd53d49",
       "dependsOn": [
         "pkg:pypi/python-magic@0.4.27",
         "pkg:pypi/s3cmd@2.4.0"
       ]
     },
     {
-      "ref": "eb018e1a-e5d6-4d5f-ace3-7857b6d1f828",
+      "ref": "ab3a70bd-5023-4aca-999d-98d142058c26",
       "dependsOn": [
-        "8da45741-2179-4b7d-9287-7fb46ad6eeac"
+        "75202cce-e428-4918-a099-86cfedd53d49"
       ]
     },
     {
