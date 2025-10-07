@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.5.2](https://github.com/tkhom3/docker-s3backup/compare/v5.5.1...v5.5.2) (2025-10-07)
+
+
+### Bug Fixes
+
+* update exclude pattern ([b590e11](https://github.com/tkhom3/docker-s3backup/commit/b590e11734f495c7620c1eec67f8e0ff9f3ddc3a))
+
 ## [5.5.1](https://github.com/tkhom3/docker-s3backup/compare/v5.5.0...v5.5.1) (2025-09-30)
 
 
