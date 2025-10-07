@@ -36,6 +36,7 @@ REPORTERS_MARKDOWN_SUMMARY_TYPE: sections
 SARIF_REPORTER: false
 SHOW_ELAPSED_TIME: true
 TEXT_REPORTER: false
+REPOSITORY_TRUFFLEHOG_ARGUMENTS: --exclude-paths .git
 YAML_PRETTIER_FILTER_REGEX_EXCLUDE: '(templates/\.mega-linter\.yml|mkdocs\.yml)'
 YAML_V8R_FILTER_REGEX_EXCLUDE: '(descriptors|templates/\.mega-linter\.yml|\.codecov\.yml)'
 YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: '(templates/\.mega-linter\.yml)'
