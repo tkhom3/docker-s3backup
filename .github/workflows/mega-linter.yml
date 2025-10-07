@@ -97,7 +97,7 @@ jobs:
         id: cpr
         if: env.APPLY_FIXES_IF_PR == 'true'
         with:
-          token: ${{ secrets.GHA_PAT || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "[MegaLinter] Apply linters automatic fixes"
           title: "[MegaLinter] Apply linters automatic fixes"
           labels: bot
