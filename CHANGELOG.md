@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.5.3](https://github.com/tkhom3/docker-s3backup/compare/v5.5.2...v5.5.3) (2025-10-19)
+
+
+### Bug Fixes
+
+* bump python from 3.13.7-alpine3.21 to 3.14.0-alpine3.21 ([5fc37d3](https://github.com/tkhom3/docker-s3backup/commit/5fc37d3ae8e6d5bc5789bfe626d2475b3a7be230))
+* bump python from 3.13.7-alpine3.21 to 3.14.0-alpine3.21 ([81a4973](https://github.com/tkhom3/docker-s3backup/commit/81a49731bb3968a49cb8b90a88941c4fa053a028))
+
 ## [5.5.2](https://github.com/tkhom3/docker-s3backup/compare/v5.5.1...v5.5.2) (2025-10-07)
 
 
