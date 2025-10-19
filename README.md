@@ -1,5 +1,4 @@
 [![Build and Deploy Image](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/tkhom3/docker-s3backup/actions/workflows/build-and-deploy.yml)
-[![MegaLinter](https://github.com/tkhom3/docker-s3backup/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/tkhom3/docker-s3backup/actions?query=workflow%3AMegaLinter+branch%3Amain)
 
 # docker-s3backup
 
