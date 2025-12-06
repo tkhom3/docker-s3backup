@@ -1,5 +1,19 @@
 # Changelog
 
+## [5.6.0](https://github.com/tkhom3/docker-s3backup/compare/v5.5.3...v5.6.0) (2025-12-06)
+
+
+### Features
+
+* update python to 3.14 ([5a7ebdf](https://github.com/tkhom3/docker-s3backup/commit/5a7ebdf15a1f1d3102f233c340465e30ba38905b))
+* update python to 3.14 ([261c1f1](https://github.com/tkhom3/docker-s3backup/commit/261c1f1dab671114b5fea0a6dc622fde7ff6b69b))
+
+
+### Bug Fixes
+
+* remove invalid options ([01e121c](https://github.com/tkhom3/docker-s3backup/commit/01e121c9cdaa4adbceea5959cce093925057846b))
+* use curl instead of pip for poetry ([39d3f35](https://github.com/tkhom3/docker-s3backup/commit/39d3f35a9e89ba624aa00d30b40a055e878c505e))
+
 ## [5.5.3](https://github.com/tkhom3/docker-s3backup/compare/v5.5.2...v5.5.3) (2025-10-19)
 
 
