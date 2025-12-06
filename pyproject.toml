@@ -2,11 +2,13 @@
 name = "docker-s3backup"
 version = "5.3.0"
 description = "Docker container for S3 backups"
-authors = [
-    {name = "tkhom3"}
-]
 readme = "README.md"
-requires-python = "^3.13"
+authors = [
+    {name = "Todd Kieffer", email = "ToddMKieffer@gmail.com"}
+]
+
+requires-python = ">= 3.14"
+
 dependencies = [
     "s3cmd == 2.4.0",
     "python-magic == 0.4.27"

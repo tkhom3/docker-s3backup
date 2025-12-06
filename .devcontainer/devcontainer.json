@@ -1,6 +1,6 @@
 {
   "name": "Python Docker S3 Backup",
-  "dockerFile": "Dockerfile",
+  "image": "python:3.14.0-alpine3.21",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -22,15 +22,11 @@
         "python.linting.pylintEnabled": true,
         "python.formatting.provider": "black"
       }
-    }
-  },
-  "remoteUser": "vscode",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.13"
     },
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/git:1": {}
+    "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+      "ghcr.io/devcontainers/features/git:1": {}
+    } 
   },
-  "postCreateCommand": "bash .devcontainer/post-build.sh"
+  "postCreateCommand": "sh .devcontainer/post-build.sh"
 }
