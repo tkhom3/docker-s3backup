@@ -39,8 +39,9 @@ RUN chmod 554 run.sh && \
 COPY --chown=$USER:$USER *.toml ./
 COPY --chown=$USER:$USER poetry.lock* ./
 
-RUN pip install poetry \
-    /root/.local/bin/poetry install
+RUN curl -sSL https://install.python-poetry.org | python3 - && \
+    export PATH="/root/.local/bin:$PATH" && \
+    poetry install --no-interaction --no-ansi --no-root
 
 USER $USER
 

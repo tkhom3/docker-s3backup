@@ -2,7 +2,7 @@
 
 set -e
 
-pip install poetry
+curl -sSL https://install.python-poetry.org | python3 -
 
 #Install Git
 apk add --no-cache git
