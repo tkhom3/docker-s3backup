@@ -12,4 +12,4 @@ export PATH="/root/.local/bin:$PATH"
 
 # Configure Poetry and install dependencies
 poetry config virtualenvs.create false
-poetry install --no-interaction --no-ansi
+poetry install

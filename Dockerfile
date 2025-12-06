@@ -40,7 +40,7 @@ COPY --chown=$USER:$USER *.toml ./
 COPY --chown=$USER:$USER poetry.lock* ./
 
 RUN pip install poetry \
-    /root/.local/bin/poetry install --no-interaction --no-ansi
+    /root/.local/bin/poetry install
 
 USER $USER
 
