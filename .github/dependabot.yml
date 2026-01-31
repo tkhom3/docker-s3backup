@@ -6,7 +6,7 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "fix: "
+      prefix: "chore: "
 
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in the `root` directory
@@ -15,7 +15,7 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "chore: "
+      prefix: "fix: "
 
   - package-ecosystem: "devcontainers"
     directory: "/"
@@ -31,4 +31,4 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "chore: "
+      prefix: "fix: "
