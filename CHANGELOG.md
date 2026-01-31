@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.6.1](https://github.com/tkhom3/docker-s3backup/compare/v5.6.0...v5.6.1) (2026-01-31)
+
+
+### Bug Fixes
+
+* add explicit pull_request types to build-image workflow ([7baca67](https://github.com/tkhom3/docker-s3backup/commit/7baca6776eb8b789de5b19bebd6abfac237d0c8b))
+* add explicit pull_request types to build-image workflow ([463d23b](https://github.com/tkhom3/docker-s3backup/commit/463d23b8309115bf9a8587cddc8819e4b95a49e1))
+* install poetry with pip ([9616f4c](https://github.com/tkhom3/docker-s3backup/commit/9616f4cc702c24bfafdf3185908287e8f6137b4a))
+* remove branch filter from build-image-on-pr workflow ([f114c1f](https://github.com/tkhom3/docker-s3backup/commit/f114c1f97e182990eab7f47fd84933ff7ade47e3))
+* remove branch filter from build-image-on-pr workflow ([3ade23f](https://github.com/tkhom3/docker-s3backup/commit/3ade23fcf57c6293f62df31f5b5b3235fa31825b))
+
 ## [5.6.0](https://github.com/tkhom3/docker-s3backup/compare/v5.5.3...v5.6.0) (2025-12-06)
 
 
