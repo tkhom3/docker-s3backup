@@ -36,11 +36,11 @@ COPY --chown=$USER:$USER run.sh .
 RUN chmod 554 run.sh && \
     chmod 664 s3cmd.cfg
 
-COPY --chown=$USER:$USER *.toml ./
-COPY --chown=$USER:$USER poetry.lock* ./
+COPY --chown=$USER:$USER pyproject.toml ./
+COPY --chown=$USER:$USER uv.lock* ./
 
-RUN pip install poetry && \
-    poetry install --no-interaction --no-ansi --no-root
+RUN pip install uv && \
+    uv sync
 
 USER $USER
 

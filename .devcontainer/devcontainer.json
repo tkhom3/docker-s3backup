@@ -1,9 +1,15 @@
 {
   "name": "Python Docker S3 Backup",
-  "image": "python:3.14.0-alpine3.21",
-  "mounts": [
-    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
-  ],
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.14" },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers-extra/features/uv:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  // "mounts": [
+  //   "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  // ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -18,7 +24,7 @@
         "oderwat.indent-rainbow"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
         "python.linting.enabled": true,
         "python.linting.pylintEnabled": true,
         "python.formatting.provider": "black",
@@ -52,6 +58,5 @@
       }
     }
   },
-  "onCreateCommand": "apk add --no-cache docker-cli git nodejs npm",
   "postCreateCommand": "sh .devcontainer/post-build.sh"
 }

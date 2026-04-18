@@ -25,10 +25,10 @@ updates:
     commit-message:
       prefix: "fix: "
 
-  - package-ecosystem: "pip"
-    directory: "/"
+  # Python collector dependencies — fix prefix, triggers patch release
+  - package-ecosystem: "uv"
+    directory: "/collector"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
     commit-message:
-      prefix: "fix: "
+      prefix: "fix"
