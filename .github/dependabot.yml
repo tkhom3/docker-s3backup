@@ -23,11 +23,18 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "fix: "
+      prefix: "chore: "
 
-  # Python collector dependencies — fix prefix, triggers patch release
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+
+  # Python dependencies — fix prefix, triggers patch release
   - package-ecosystem: "uv"
-    directory: "/collector"
+    directory: "/"
     schedule:
       interval: "weekly"
     commit-message:
