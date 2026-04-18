@@ -1,3 +1,30 @@
+## [5.6.1](https://github.com/tkhom3/docker-s3backup/compare/v5.6.0...v5.6.1) (2026-04-18)
+
+### 🐛 Bug Fixes
+
+* add explicit pull_request types to build-image workflow ([463d23b](https://github.com/tkhom3/docker-s3backup/commit/463d23b8309115bf9a8587cddc8819e4b95a49e1))
+* force release ([ced6f20](https://github.com/tkhom3/docker-s3backup/commit/ced6f20bd90a99c659992137e2e3c91cbf1fe45b))
+* install poetry with pip ([9616f4c](https://github.com/tkhom3/docker-s3backup/commit/9616f4cc702c24bfafdf3185908287e8f6137b4a))
+* remove branch filter from build-image-on-pr workflow ([3ade23f](https://github.com/tkhom3/docker-s3backup/commit/3ade23fcf57c6293f62df31f5b5b3235fa31825b))
+
+### 🔧 Chores
+
+* bump actions/checkout from 5.0.0 to 6.0.2 ([a884f52](https://github.com/tkhom3/docker-s3backup/commit/a884f5241948a9e059d802267126bf880f8c030f))
+* bump dependabot/fetch-metadata from 2 to 3 ([f7f1b3d](https://github.com/tkhom3/docker-s3backup/commit/f7f1b3d64746807ea7432a752874f258b554a259))
+* bump docker/build-push-action from 6.18.0 to 6.19.1 ([e086a62](https://github.com/tkhom3/docker-s3backup/commit/e086a62165857e91e35f5fffbee5d4b60cddcaed))
+* bump docker/build-push-action from 6.19.1 to 6.19.2 ([77737a4](https://github.com/tkhom3/docker-s3backup/commit/77737a40b9363113c983a325b0f87c6b393b1ba8))
+* bump docker/build-push-action from 6.19.2 to 7.0.0 ([9d59eab](https://github.com/tkhom3/docker-s3backup/commit/9d59eab34dff1ec121a0d0eda4716fce770867d5))
+* bump docker/build-push-action from 7.0.0 to 7.1.0 ([08294a0](https://github.com/tkhom3/docker-s3backup/commit/08294a0435c923f30d5e390639b78addd88c2e55))
+* bump docker/login-action from 3.6.0 to 3.7.0 ([8c03585](https://github.com/tkhom3/docker-s3backup/commit/8c03585c5596859c7d4f478cc43a65694ff1e59a))
+* bump docker/login-action from 3.7.0 to 4.0.0 ([313ea2b](https://github.com/tkhom3/docker-s3backup/commit/313ea2ba34390687d35c9c565ff946c1e6421545))
+* bump docker/login-action from 4.0.0 to 4.1.0 ([f054ed2](https://github.com/tkhom3/docker-s3backup/commit/f054ed2a6030c8270f0a0d2767665c004a73f99c))
+* bump docker/setup-buildx-action from 3 to 4 ([464490a](https://github.com/tkhom3/docker-s3backup/commit/464490a08e1aabbe7196f1051dcd16f50ee6b6f6))
+* bump python from 3.14.0-alpine3.21 to 3.14.1-alpine3.21 ([5556a93](https://github.com/tkhom3/docker-s3backup/commit/5556a93705c3b2ab0db48835c2c6e94c8daf2eb3))
+* migrate to uv ([2d4c354](https://github.com/tkhom3/docker-s3backup/commit/2d4c3547a1f30b0fdf706e0552faca9ce977d910))
+* new release step ([df19f4e](https://github.com/tkhom3/docker-s3backup/commit/df19f4ec196b873fa645fdf0d2dba60c851c6363))
+* replace release-please with semantic-release ([4754f01](https://github.com/tkhom3/docker-s3backup/commit/4754f01bae14acf5f09add9be4d6b8290a2143ab))
+* update workflows and devcontainer ([f1e72aa](https://github.com/tkhom3/docker-s3backup/commit/f1e72aa1a4d28d9228ea13c485929ecb402d8103))
+
 # Changelog
 
 ## [5.6.0](https://github.com/tkhom3/docker-s3backup/compare/v5.5.3...v5.6.0) (2025-12-06)
