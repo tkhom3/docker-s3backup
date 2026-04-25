@@ -1,3 +1,9 @@
+## [5.6.2](https://github.com/tkhom3/docker-s3backup/compare/v5.6.1...v5.6.2) (2026-04-25)
+
+### 🐛 Bug Fixes
+
+* install deps as user instead of root ([8c25f66](https://github.com/tkhom3/docker-s3backup/commit/8c25f66c46a59ff5c6a67cd875606acecd769f78))
+
 ## [5.6.1](https://github.com/tkhom3/docker-s3backup/compare/v5.6.0...v5.6.1) (2026-04-18)
 
 ### 🐛 Bug Fixes
