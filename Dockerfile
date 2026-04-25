@@ -39,9 +39,12 @@ RUN chmod 554 run.sh && \
 COPY --chown=$USER:$USER pyproject.toml ./
 COPY --chown=$USER:$USER uv.lock* ./
 
-RUN pip install uv && \
-    uv sync
+RUN pip install uv
 
 USER $USER
+
+RUN uv sync --no-dev
+
+ENV PATH="/home/$USER/.venv/bin:$PATH"
 
 ENTRYPOINT ["sh", "run.sh"]
