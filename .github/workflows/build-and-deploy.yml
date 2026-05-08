@@ -8,6 +8,8 @@ on:
 permissions:
   actions: write
   contents: write
+  issues: write
+  id-token: write
 
 jobs:
   build-and-release-image:
