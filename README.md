@@ -22,4 +22,4 @@ Mount a second directory to `/config` for the cache file.
 | CACHE_FILE    | `/tmp/s3cmd_cache.txt` | Location to write the file cache            |
 | LOG_FILE      | `/tmp/s3backup.log`    | Location to write the log file              |
 
-redeploy: 1
+redeploy: 0
