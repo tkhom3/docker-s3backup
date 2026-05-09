@@ -58,5 +58,5 @@
       }
     }
   },
-  "postCreateCommand": "sh .devcontainer/post-build.sh"
+  "postCreateCommand": "uv sync"
 }
