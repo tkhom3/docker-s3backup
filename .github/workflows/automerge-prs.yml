@@ -9,5 +9,5 @@ permissions:
 
 jobs:
   build-image:
-    uses: tkhom3/gha-workflows/.github/workflows/automerge-prs.yml@7b2d2e74a1e5e78eaa00680703479a72f3cef661 # v1.0.2
+    uses: tkhom3/gha-workflows/.github/workflows/automerge-prs.yml@f03247460173d72146e5c9df8fa09dde94325b5d # v1.0.4
     secrets: inherit
