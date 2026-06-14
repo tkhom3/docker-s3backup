@@ -1,10 +1,15 @@
 name: Create Release, Build and Deploy Image
 
 on:
- push:
+  push:
     branches:
       - 'main'
       - 'beta'
+  pull_request_target:
+    branches:
+      - 'main'
+      - 'beta'
+    types: [closed]
 
 permissions:
   actions: write
@@ -15,5 +20,6 @@ permissions:
 
 jobs:
   build-and-release-image:
+    if: github.actor == 'dependabot[bot]' || github.event_name == 'push'
     uses: tkhom3/gha-workflows/.github/workflows/build-and-push-image.yml@baac94b3959e9289608ba8d2a5675965462b1461 # v1.0.7
     secrets: inherit
