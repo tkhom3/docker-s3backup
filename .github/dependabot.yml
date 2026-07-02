@@ -4,35 +4,47 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
     commit-message:
       prefix: "chore: "
+    groups:
+      github-actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in the `root` directory
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
     commit-message:
       prefix: "fix: "
     ignore:
       - dependency-name: "python"
         update-types:
           - "version-update:semver-minor"
+    groups:
+      docker:
+        patterns:
+          - "*"
 
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
     commit-message:
       prefix: "chore: "
+    groups:
+      devcontainers:
+        patterns:
+          - "*"
 
-  # Python dependencies — fix prefix, triggers patch release
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: "weekly"
     commit-message:
       prefix: "fix: "
+    groups:
+      uv:
+        patterns:
+          - "*"
