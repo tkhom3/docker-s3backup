@@ -44,6 +44,6 @@ ls -F $PHOTO_DIR
 echo "----------------------------------------"
 
 echo "$CRON_SCHEDULE s3cmd sync -c /home/$USER/s3cmd.cfg --cache-file=$APP_DIR/$CACHE_FILE $BACKUP_DIR/ $S3PATH/unraid_backup/" >> "/home/$USER/crontab"
-echo "$PHOTO_CRON_SCHEDULE s3cmd sync -c /home/$USER/s3cmd.cfg --cache-file=$APP_DIR/$CACHE_FILE $PHOTO_DIR/ $S3PATH/photos/ --storage-class=GLACIER" >> "/home/$USER/crontab"
+echo "$PHOTO_CRON_SCHEDULE s3cmd sync -c /home/$USER/s3cmd.cfg --exclude 'thumbs/*' --exclude 'encoded-video/*' --cache-file=$APP_DIR/$CACHE_FILE $PHOTO_DIR/ $S3PATH/photos/ --storage-class=GLACIER_IR" >> "/home/$USER/crontab"
 
 supercronic -passthrough-logs crontab 2>&1 | tee -a $APP_DIR/$LOG_FILE
